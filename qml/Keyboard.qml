@@ -44,14 +44,14 @@ Rectangle {
 
     // icon hack
     property var iconReference: {
-        ":backspace": "icon-m-backspace",
-        ":down": "icon-m-down",
-        ":enter": "icon-m-enter",
-        ":left": "icon-m-left",
-        ":right": "icon-m-right",
+        ":backspace": "icon-m-enter-next", // mirrored
+        ":down": "icon-m-change-type",
+        ":enter": "icon-m-redirect", // mirrored
+        ":left": "icon-m-change-type", // rotated
+        ":right": "icon-m-change-type", // rotated
         ":shift": "icon-m-autocaps",
-        ":tab": "icon-m-transfer",
-        ":up": "icon-m-up",
+        ":tab": "icon-m-transfer", // rotated
+        ":up": "icon-m-change-type", // rotated
         "pgdn": "icon-m-page-down",
         "pgup": "icon-m-page-up"
     }

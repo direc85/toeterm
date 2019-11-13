@@ -66,17 +66,39 @@ Rectangle {
     Image {
         id: keyImage
         anchors.centerIn: parent
+
+        width: parent.width
+        height: parent.width
         opacity: (key.label_alt == '' || !key.shiftActive) ? key.labelOpacity : 0
         Behavior on opacity {
             FadeAnimation {}
         }
         source: {
-            if(key.label.length>1 && keyboard.iconReference[key.label])
+            if(key.label.length > 1 && keyboard.iconReference[key.label]) {
+                if(key.label === ":enter") {
+                    mirror = true
+                    scale = 0.9
+                }
+                else if(key.label ===  "pgup")
+                    scale = 0.9
+                else if(key.label ===  "pgdn")
+                    scale = 0.9
+                else if(key.label === ":tab")
+                    rotation = -90
+                else if(key.label === ":left")
+                    rotation = 90
+                else if(key.label === ":right")
+                    rotation = -90
+                else if(key.label === ":up")
+                    rotation = 180
+                else if(key.label === ":backspace")
+                    mirror = true
                 return "image://theme/" + keyboard.iconReference[key.label];
+            }
             else
                 return "";
         }
-        scale: window.pixelRatio * 0.75
+        transformOrigin: Item.Center
         visible: key.label != ":shift" || stickiness == 1
     }
     Image {
