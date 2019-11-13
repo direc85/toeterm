@@ -36,15 +36,6 @@ Page {
         util.setSettingsValue("terminal/charset", charsetName);
         ptyiface.changeCharset(charsetName);
     }
-    Timer {
-        id: scrollDownTimer
-        running: false
-        repeat: false
-        interval: 300
-        onTriggered: {
-            mainSettingsFlickable.scrollToBottom();
-        }
-    }
     SilicaFlickable {
         id: mainSettingsFlickable
         anchors.fill: parent
@@ -101,7 +92,6 @@ Page {
                 id: section1
                 buttonHeight: Theme.iconSizeLarge
                 title: qsTr("Actions")
-                onExpandedChanged: { pageStack.previousPage().settingsActionsOpened = expanded; }
                 Component {
                     id: xmlDelegate
                     ListItem {
@@ -138,7 +128,6 @@ Page {
                 id: section2
                 buttonHeight: Theme.iconSizeLarge
                 title: qsTr("URL grabber")
-                onExpandedChanged: { pageStack.previousPage().settingsUrlsOpened = expanded; }
                 Component {
                     id: listDelegate
                     ListItem {
@@ -176,7 +165,6 @@ Page {
                 id: section3
                 buttonHeight: Theme.iconSizeLarge
                 title: qsTr("Keyboard layout")
-                onExpandedChanged: { pageStack.previousPage().settingsLayoutsOpened = expanded; scrollDownTimer.restart(); }
                 Component {
                     id: listDelegate2
                     TextSwitch {
@@ -210,7 +198,6 @@ Page {
                 id: section4
                 buttonHeight: Theme.iconSizeLarge
                 title: qsTr("Settings")
-                onExpandedChanged: { pageStack.previousPage().settingsSettingsOpened = expanded; scrollDownTimer.restart(); }
                 content.sourceComponent: Column {
                     Slider {
                         enabled: section4.expanded
@@ -351,7 +338,6 @@ Page {
                 id: section5
                 buttonHeight: Theme.iconSizeLarge
                 title: qsTr("Color scheme")
-                onExpandedChanged: { pageStack.previousPage().settingsColorsOpened = expanded; scrollDownTimer.restart(); }
                 Component {
                     id: listDelegate3
                     ListItem {
