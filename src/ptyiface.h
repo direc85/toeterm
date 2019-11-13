@@ -1,23 +1,23 @@
 /*
-    Copyright 2011-2012 Heikki Holstila <heikki.holstila@gmail.com>
+    ThumbTerm Copyright Olli Vanhoja
+    FingerTerm Copyright 2011-2012 Heikki Holstila <heikki.holstila@gmail.com>
+    ToeTerm Copyright R-033, 2019 Matti Viljanen
 
-    This file is part of FingerTerm.
+    This file is part of ToeTerm.
 
-    FingerTerm is free software: you can redistribute it and/or modify
+    ToeTerm is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
     the Free Software Foundation, either version 2 of the License, or
     (at your option) any later version.
 
-    FingerTerm is distributed in the hope that it will be useful,
+    ToeTerm is distributed in the hope that it will be useful,
     but WITHOUT ANY WARRANTY; without even the implied warranty of
     MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
     GNU General Public License for more details.
 
     You should have received a copy of the GNU General Public License
-    along with FingerTerm.  If not, see <http://www.gnu.org/licenses/>.
-*/
-
-#ifndef PTYIFACE_H
+    along with ToeTerm.  If not, see <http://www.gnu.org/licenses/>.
+*/#ifndef PTYIFACE_H
 #define PTYIFACE_H
 
 #include <QObject>
