@@ -31,7 +31,6 @@
 #include "terminal.h"
 #include "util.h"
 #include "textrender.h"
-//#include "version.h"
 
 #include <QFeedbackEffect>
 

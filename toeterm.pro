@@ -3,8 +3,6 @@ CONFIG += sailfishapp link_pkgconfig
 PKGCONFIG += sailfishapp nemonotifications-qt5
 LIBS += -lutil
 
-system($$PWD/updateversion.sh)
-
 QT += feedback
 
 HEADERS += \
