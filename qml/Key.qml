@@ -108,13 +108,14 @@ Rectangle {
     Image {
         id: capsImage
         anchors.centerIn: parent
+        width: parent.width * 0.9
+        height: parent.width * 0.9
         property real lop: key.labelOpacity
         opacity: lop * (stickiness == 0 ? 0.2 : 1)
         Behavior on opacity {
             FadeAnimation {}
         }
         source: "image://theme/icon-m-capslock"
-        scale: window.pixelRatio * 0.75
         visible: key.label == ":shift" && stickiness != 1
     }
 
