@@ -6,6 +6,7 @@ Group: System/Base
 License: GPLv2
 Sources:
 - '%{name}-%{version}.tar.bz2'
+URL: http://github.com/direc85/toeterm
 Description: |
   A terminal emulator with a custom virtual keyboard
 Configure: none
