@@ -9,6 +9,15 @@ Page {
     property string currentDragMode: util.settingsValue("ui/dragMode")
     property int keyboardFadeOutDelay: util.settingsValue("ui/keyboardFadeOutDelay")
     allowedOrientations: Orientation.All
+    onVisibleChanged: {
+        if(!visible && pageStack.currentPage === !settingsPage) {
+            section1.expanded = false
+            section2.expanded = false
+            section3.expanded = false
+            section4.expanded = false
+            section5.expanded = false
+        }
+    }
     Item {
         id: layoutWindow
         property variant layouts: keyLoader.allAvailableLayouts()
@@ -92,7 +101,6 @@ Page {
                 id: section1
                 buttonHeight: Theme.iconSizeLarge
                 title: qsTr("Actions")
-                expanded: pageStack.previousPage() ? pageStack.previousPage().settingsActionsOpened : false
                 onExpandedChanged: { pageStack.previousPage().settingsActionsOpened = expanded; }
                 Component {
                     id: xmlDelegate
@@ -130,7 +138,6 @@ Page {
                 id: section2
                 buttonHeight: Theme.iconSizeLarge
                 title: qsTr("URL grabber")
-                expanded: pageStack.previousPage() ? pageStack.previousPage().settingsUrlsOpened : false
                 onExpandedChanged: { pageStack.previousPage().settingsUrlsOpened = expanded; }
                 Component {
                     id: listDelegate
@@ -169,7 +176,6 @@ Page {
                 id: section3
                 buttonHeight: Theme.iconSizeLarge
                 title: qsTr("Keyboard layout")
-                expanded: pageStack.previousPage() ? pageStack.previousPage().settingsLayoutsOpened : false
                 onExpandedChanged: { pageStack.previousPage().settingsLayoutsOpened = expanded; scrollDownTimer.restart(); }
                 Component {
                     id: listDelegate2
@@ -204,7 +210,6 @@ Page {
                 id: section4
                 buttonHeight: Theme.iconSizeLarge
                 title: qsTr("Settings")
-                expanded: pageStack.previousPage() ? pageStack.previousPage().settingsSettingsOpened : false
                 onExpandedChanged: { pageStack.previousPage().settingsSettingsOpened = expanded; scrollDownTimer.restart(); }
                 content.sourceComponent: Column {
                     Slider {
@@ -346,7 +351,6 @@ Page {
                 id: section5
                 buttonHeight: Theme.iconSizeLarge
                 title: qsTr("Color scheme")
-                expanded: pageStack.previousPage() ? pageStack.previousPage().settingsColorsOpened : false
                 onExpandedChanged: { pageStack.previousPage().settingsColorsOpened = expanded; scrollDownTimer.restart(); }
                 Component {
                     id: listDelegate3
