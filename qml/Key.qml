@@ -34,7 +34,7 @@ Rectangle {
     property bool becomesSticky: false // will this become sticky after release?
     property int stickiness: 0      // current stickiness status
     property bool passiveKey: keyboard.isPassiveKey(code)
-    property real labelOpacity: keyboard.active ? 1.0 : key.passiveKey ? 0.75 : 0.1
+    property real labelOpacity: keyboard.active ? 1.0 : key.passiveKey ? 0.75 : 0.15
 
     // mouse input handling
     property int clickThreshold: 20
