@@ -19,5 +19,6 @@
         <file>data/Solarized_Dark.colors</file>
         <file>data/Solarized_Light.colors</file>
         <file>data/english_extra.layout</file>
+        <file alias="toeterm.png">icons/172x172/toeterm.png</file>
     </qresource>
 </RCC>
