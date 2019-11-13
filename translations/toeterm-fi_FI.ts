@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="fi_FI">
+<TS version="2.0" language="fi_FI">
 <context>
     <name>AboutPage</name>
     <message>
@@ -88,17 +88,17 @@
     <message>
         <location filename="../qml/SettingsMenu.qml" line="226"/>
         <source>Font size</source>
-        <translation>Fonttikoko</translation>
+        <translation>Tekstin koko</translation>
     </message>
     <message>
         <location filename="../qml/SettingsMenu.qml" line="245"/>
         <source>Drag mode</source>
-        <translation>Raahaustila</translation>
+        <translation>Sipaisutoiminto</translation>
     </message>
     <message>
         <location filename="../qml/SettingsMenu.qml" line="251"/>
         <source>Gestures</source>
-        <translation>Eleet</translation>
+        <translation>Eleohjaus</translation>
     </message>
     <message>
         <location filename="../qml/SettingsMenu.qml" line="251"/>
@@ -113,7 +113,7 @@
     <message>
         <location filename="../qml/SettingsMenu.qml" line="261"/>
         <source>Keyboard behavior</source>
-        <translation>Näppäimistön käytös</translation>
+        <translation>Näkyvyyskäytäntö</translation>
     </message>
     <message>
         <location filename="../qml/SettingsMenu.qml" line="267"/>
@@ -133,7 +133,7 @@
     <message>
         <location filename="../qml/SettingsMenu.qml" line="277"/>
         <source>Keyboard delay</source>
-        <translation>Näppäimistöviive</translation>
+        <translation>Piilotusviive</translation>
     </message>
     <message>
         <location filename="../qml/SettingsMenu.qml" line="281"/>
@@ -148,7 +148,7 @@
     <message>
         <location filename="../qml/SettingsMenu.qml" line="297"/>
         <source>Keyboard feedback</source>
-        <translation>Näppäimistön palaute</translation>
+        <translation>Värinäpalaute</translation>
     </message>
     <message>
         <location filename="../qml/SettingsMenu.qml" line="303"/>
