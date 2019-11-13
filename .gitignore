@@ -1,0 +1,10 @@
+# Specify filepatterns you want git to ignore.
+*.autosave
+*.old
+*.bak
+*.tmp
+*.pro.user
+*.pro.user.*
+*.qm
+*.spec
+*.spec.*
