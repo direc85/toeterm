@@ -284,7 +284,7 @@ Rectangle {
             keyboard.currentStickyPressed = null;
         }
 
-        if (vkb.keyAt(x, y) == key) {
+        if (vkb.keyAt(x, y) === key) {
             util.keyReleaseFeedback();
 
             if (key.sticky && key.becomesSticky) {

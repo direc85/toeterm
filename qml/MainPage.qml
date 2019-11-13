@@ -416,7 +416,7 @@ Page {
                 }
 
                 var key = vkb.keyAt(touchPoint.x, t_y);
-                if (key != null) {
+                if (key !== null) {
                     key.handlePress(multiTouchArea, touchPoint.x, t_y);
                     if (key.code === 0x20) {
                         spaceXswipe = touchPoint.x;
@@ -429,19 +429,19 @@ Page {
         onUpdated: {
             touchPoints.forEach(function (touchPoint) {
                 var t_y = touchPoint.y + y;
-                if (multiTouchArea.firstTouchId == touchPoint.pointId) {
+                if (multiTouchArea.firstTouchId === touchPoint.pointId) {
                     //gestures c++ handler
                     util.mouseMove(touchPoint.x, t_y);
                 }
 
                 var key = multiTouchArea.pressedKeys[touchPoint.pointId];
-                if (key != null) {
+                if (key !== null) {
                     if (!key.handleMove(multiTouchArea, touchPoint.x, t_y)) {
                         // This means that the user swiped out of the current key.
                         // Find the new key in that position and make it the currently
                         // highlighted key.
                         key = vkb.keyAt(touchPoint.x, t_y);
-                        if (key != null) {
+                        if (key !== null) {
                             if (!spacePressed) {
                                 key.handlePress(multiTouchArea, touchPoint.x, t_y);
                             } else if (keyLoader.availableLayouts().length > 1) {
@@ -465,7 +465,7 @@ Page {
             touchPoints.forEach(function (touchPoint) {
                 var t_y = touchPoint.y + y;
                 var t_y2 = touchPoint.startY + y;
-                if (multiTouchArea.firstTouchId == touchPoint.pointId) {
+                if (multiTouchArea.firstTouchId === touchPoint.pointId) {
                     // Toggle keyboard wake-up when tapping outside the keyboard, but:
                     //   - only when not scrolling (y-diff < 20 pixels)
                     //   - not in select mode, as it would be hard to select text
@@ -484,7 +484,7 @@ Page {
                 }
 
                 var key = multiTouchArea.pressedKeys[touchPoint.pointId];
-                if (key != null) {
+                if (key !== null) {
                     if (spacePressed) {
                         if (keyLoader.availableLayouts().length > 1) {
                             if (spaceXswipe < touchPoint.x - 50) {

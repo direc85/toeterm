@@ -166,7 +166,7 @@ Rectangle {
         x -= keyboard.x
         y -= keyboard.y
 
-        while ((item = item.childAt(x, y)) != null) {
+        while ((item = item.childAt(x, y)) !== null) {
             //return the first "Key" element we find
             if (typeof item.currentCode !== 'undefined') {
                 return item
