@@ -509,8 +509,9 @@ Page {
         width: Theme.iconSizeExtraLarge
         height: Theme.iconSizeExtraLarge
         onCheckedChanged: {
+            if(checked === false)
+                pageStack.push(settingsPagePath)
             checked = true
-            pageStack.push(settingsPagePath)
         }
         z: 100
     }
