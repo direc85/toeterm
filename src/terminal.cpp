@@ -196,7 +196,7 @@ void Terminal::keyPress(int key, int modifiers)
             if (asciiVal >= 0x41 && asciiVal <= 0x5f) {
                 // Turn uppercase characters into their control code equivalent
                 toWrite.append(asciiVal - 0x40);
-            } else if (asciiVal >= 0x61 && asciiVal <= 0x7f) {
+            } else if (asciiVal >= 0x61) {
                 // Turn lowercase characters into their control code equivalent
                 toWrite.append(asciiVal - 0x60);
             } else {
