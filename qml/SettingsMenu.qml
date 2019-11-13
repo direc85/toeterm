@@ -355,7 +355,6 @@ Page {
                             pageStack.previousPage().textRenderItem.loadColorScheme(modelData);
                             pageStack.previousPage().bgDrawItem.color = "#" + pageStack.previousPage().textRenderItem.getColor("colors/bgColor");
                             pageStack.previousPage().bgTimerItem.restart();
-                            section5.expanded = false;
                         }
                     }
                 }
