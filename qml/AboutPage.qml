@@ -54,7 +54,7 @@ Page {
                 Label {
                     anchors.right: parent.right
                     anchors.left: parent.left
-                    text: "by ROZZ"
+                    text: "by ROZZ & direc85"
                     color: Theme.rgba(Theme.highlightColor, 0.5)
                     horizontalAlignment: Text.AlignHCenter
                     verticalAlignment: Text.AlignVCenter
