@@ -1,4 +1,5 @@
 [Desktop Entry]
+X-Nemo-Application-Type=silica-qt5
 Type=Application
 Name=ToeTerm
 Categories=Utility
