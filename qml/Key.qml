@@ -83,6 +83,8 @@ Rectangle {
                     scale = 0.9
                 else if(key.label ===  "pgdn")
                     scale = 0.9
+                else if(key.label === ":shift")
+                    scale = 0.9
                 else if(key.label === ":tab")
                     rotation = -90
                 else if(key.label === ":left")
