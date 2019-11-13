@@ -54,7 +54,7 @@ Rectangle {
         ":up": "icon-m-up",
         "pgdn": "icon-m-page-down",
         "pgup": "icon-m-page-up"
-    };
+    }
 
     Component {
         id: keyboardContents
