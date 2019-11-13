@@ -32,11 +32,12 @@ SAILFISHAPP_ICONS = 86x86 108x108 128x128 172x172
 
 CONFIG += sailfishapp_i18n
 
-TRANSLATIONS += translations/toeterm-ru.ts
-TRANSLATIONS += translations/toeterm-nl.ts
-TRANSLATIONS += translations/toeterm-sv.ts
-TRANSLATIONS += translations/toeterm-nl_BE.ts
-TRANSLATIONS += translations/toeterm-es.ts
+TRANSLATIONS += translations/toeterm-ru.ts \
+    translations/toeterm-nl.ts \
+    translations/toeterm-sv.ts \
+    translations/toeterm-nl_BE.ts \
+    translations/toeterm-es.ts \
+    translations/toeterm-fi_FI.ts
 
 DISTFILES += \
     translations/toeterm-nl.ts \
@@ -45,4 +46,5 @@ DISTFILES += \
     rpm/toeterm.spec \
     translations/toeterm-sv.ts \
     translations/toeterm-nl_BE.ts \
-    translations/toeterm-es.ts
+    translations/toeterm-es.ts \
+    translations/toeterm-fi_FI.ts
