@@ -226,6 +226,8 @@ void defaultSettings(QSettings* settings)
         settings->setValue("ui/keyboardFadeOutDelay", 4000);
     if(!settings->contains("ui/showExtraLinesFromCursor"))
         settings->setValue("ui/showExtraLinesFromCursor", 2);
+    if(!settings->contains("ui/dockLineviewToTop"))
+        settings->setValue("ui/dockLineviewToTop", false);
     if(!settings->contains("ui/vkbShowMethod"))
         settings->setValue("ui/vkbShowMethod", "move");  // "fade", "move", "off"
     if(!settings->contains("ui/keyPressFeedback"))

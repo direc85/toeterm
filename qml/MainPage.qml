@@ -227,7 +227,7 @@ Page {
             }
 
             vkb.active = true;
-            lineView.setPosition(vkb.active);
+            lineView.setVisibility(vkb.active);
             util.updateSwipeLock(!vkb.active);
             setTextRenderAttributes();
             updateGesturesAllowed();
@@ -238,7 +238,7 @@ Page {
             textrender.duration = window.fadeInTime;
             lineView.duration = window.fadeInTime;
             vkb.active = false;
-            lineView.setPosition(vkb.active);
+            lineView.setVisibility(vkb.active);
             util.updateSwipeLock(!vkb.active);
             setTextRenderAttributes();
             updateGesturesAllowed();
@@ -383,13 +383,20 @@ Page {
 
     Lineview {
         id: lineView
+        function updatePosition() {
+            if(anchorToTop)
+                y = 0
+            else
+                y = vkb.y - height
+        }
+
+        property bool anchorToTop: util.settingsValueBool("ui/dockLineviewToTop")
+        onAnchorToTopChanged: updatePosition()
         x: 0
         y: 0
         z: 20
         property int duration: 0;
-        onFontPointSizeChanged: {
-            lineView.setPosition(vkb.active)
-        }
+        onFontPointSizeChanged: lineView.setVisibility(vkb.active)
     }
 
     Keyboard {
@@ -401,6 +408,7 @@ Page {
         anchors.bottom: parent.bottom
         anchors.left: parent.left
         anchors.right: parent.right
+        onWidthChanged: lineView.updatePosition()
     }
 
     function showLayoutSwitcher(key) {

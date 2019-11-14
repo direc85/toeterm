@@ -77,8 +77,8 @@ Rectangle {
             }
         }
         onHeightChanged: {
-            lineView.height = height+8*window.pixelRatio
-            setPosition(vkb.active)
+            lineView.height = height / lines.length * (lines.length+1)
+            setVisibility(vkb.active)
         }
     }
 
@@ -86,13 +86,15 @@ Rectangle {
         extraLines = util.settingsValue("ui/showExtraLinesFromCursor");
     }
 
-    function setPosition(vkbActive)
+    function setVisibility(vkbActive)
     {
-        if(util.settingsValue("ui/vkbShowMethod")==="off") {
-            lineView.opacity = 0;
-            return;
+        if(util.settingsValue("ui/vkbShowMethod") === "fade") {
+            lineView.opacity = vkbActive ? 1 : 0
+            lineView.enabled = vkbActive ? true : false
         }
-        y = (util.settingsValue("ui/vkbShowMethod")!=="move") ? 0 : -(height+window.paddingSmall);
-        lineView.opacity = vkbActive ? 1 : 0;
+        else {
+            lineView.opacity = 0
+            lineView.enabled = 0
+        }
     }
 }

@@ -29,6 +29,8 @@ Page {
     property string currentShowMethod: util.settingsValue("ui/vkbShowMethod")
     property string currentDragMode: util.settingsValue("ui/dragMode")
     property int keyboardFadeOutDelay: util.settingsValue("ui/keyboardFadeOutDelay")
+    property int showExtraLinesFromCursor: util.settingsValue("ui/showExtraLinesFromCursor")
+
     allowedOrientations: Orientation.All
     onVisibleChanged: {
         if(!visible && pageStack.currentPage === !settingsPage) {
@@ -290,6 +292,52 @@ Page {
                             }
                         }
                     }
+                    Slider {
+                        enabled: section4.expanded
+                        label: qsTr("Highlight box extra lines")
+                        width: parent.width
+                        value: showExtraLinesFromCursor
+                        minimumValue: 0
+                        maximumValue: 10
+                        valueText: value
+                        stepSize: 1
+                        onReleased: {
+                            util.setSettingsValue("ui/showExtraLinesFromCursor", value)
+                            pageStack.previousPage().windowItem.displayBufferChanged()
+                        }
+                    }
+
+                    ComboBox {
+                        id: boxPosCombo
+                        width: parent.width
+                        label: qsTr("Highlight box position")
+                        property string sTop: qsTr("top")
+                        property string sBottom: qsTr("bottom")
+                        menu: ContextMenu {
+                            id: boxPosMenu
+                            MenuItem {
+                                text: boxPosCombo.sTop
+                                onClicked: boxPosCombo.boxPosSave(true)
+                                highlighted: boxPosCombo.value === boxPosCombo.sTop
+                            }
+                            MenuItem {
+                                text: boxPosCombo.sBottom
+                                onClicked: boxPosCombo.boxPosSave(false)
+                                highlighted: boxPosCombo.value === boxPosCombo.sBottom
+                            }
+                        }
+                        function boxPosSave(value) {
+                            util.setSettingsValue("ui/dockLineviewToTop", value)
+                            pageStack.previousPage().lineViewItem.anchorToTop = value
+                            boxPosCombo.value = value ? sTop : sBottom
+                        }
+                        Component.onCompleted: {
+                            currentIndex = util.settingsValueBool("ui/dockLineviewToTop") ? 0 : 1
+                            value = currentIndex === 0 ? sTop : sBottom
+                        }
+                        enabled: section4.expanded
+                    }
+
                     TextSwitch {
                         enabled: section4.expanded
                         checked: util.settingsValueBool("ui/keyPressFeedback")
