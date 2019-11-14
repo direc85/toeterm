@@ -285,8 +285,8 @@ Page {
 
         function displayBufferChanged()
         {
-            lineView.lines = term.printableLinesFromCursor(util.settingsValue("ui/showExtraLinesFromCursor"));
-            appWindow.lines = term.printableLinesFromCursor(30);
+            lineView.lines = term.printableLinesFromCursor(util.settingsValue("ui/showExtraLinesFromCursor"), false);
+            appWindow.lines = term.printableLinesFromCursor(30, true);
             lineView.cursorX = textrender.cursorPixelPos().x;
             lineView.cursorWidth = textrender.cursorPixelSize().width;
             lineView.cursorHeight = textrender.cursorPixelSize().height;

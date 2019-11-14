@@ -1107,12 +1107,12 @@ QList<TermChar>& Terminal::currentLine()
     return buffer()[buffer().size()-1];
 }
 
-const QStringList Terminal::printableLinesFromCursor(int lines)
+const QStringList Terminal::printableLinesFromCursor(int lines, bool withEmptyLines)
 {
     QStringList ret;
 
     int start = cursorPos().y() - lines;
-    int end = cursorPos().y() + lines;
+    int end = cursorPos().y() + (withEmptyLines ? lines : 0);
 
     for(int l=start-1; l<end; l++) {
         ret.append("");

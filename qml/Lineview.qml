@@ -44,11 +44,11 @@ Rectangle {
 
     Rectangle {
         x: cursorX
-        y: lineTextCol.y + lineTextCol.height/2 - height/2
+        anchors.bottom: lineTextCol.bottom
         width: cursorWidth
         height: cursorHeight
         color: lineView.fgColor
-        opacity: 0.5
+        opacity: 0.75
     }
 
     Column {

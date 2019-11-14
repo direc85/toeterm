@@ -81,7 +81,7 @@ public:
     QList<TermChar>& currentLine();
 
     Q_INVOKABLE void keyPress(int key, int modifiers);
-    Q_INVOKABLE const QStringList printableLinesFromCursor(int lines);
+    Q_INVOKABLE const QStringList printableLinesFromCursor(int lines, bool withEmptyLines);
     Q_INVOKABLE void putString(QString str, bool unEscape=false);
 
     Q_INVOKABLE void pasteFromClipboard();
