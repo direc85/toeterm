@@ -39,6 +39,13 @@ Page {
     property Item bgDrawItem: bgDraw
     property Timer bgTimerItem: bgColorTimer
     property string settingsPagePath: Qt.resolvedUrl("SettingsMenu.qml")
+
+    onStatusChanged: {
+        if(status === PageStatus.Active) {
+            fadeTimer.interval = util.settingsValue("ui/keyboardFadeOutDelay")
+        }
+    }
+
     Rectangle {
         property int fontSize: 14*pixelRatio
 
