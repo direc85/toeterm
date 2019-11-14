@@ -21,7 +21,7 @@
     <message>
         <location filename="../qml/AboutPage.qml" line="116"/>
         <source>Based on ThumbTerm by Olli Vanhoja, which is fork of FingerTerm by Heikki Holstila</source>
-        <translation>基于 OlliVanhoja 开发的 ThumbTerm( 即Heukki Holstila FingerTerm 的分支软件)。</translation>
+        <translation>基于 OlliVanhoja 开发的 ThumbTerm(即 Heukki Holstila 开发的 FingerTerm 的分支软件)。</translation>
     </message>
     <message>
         <location filename="../qml/AboutPage.qml" line="128"/>
@@ -173,7 +173,7 @@
     <message>
         <location filename="../qml/SettingsMenu.qml" line="349"/>
         <source>Transparent background</source>
-        <translation透明背景></translation>
+        <translation>透明背景</translation>
     </message>
     <message>
         <location filename="../qml/SettingsMenu.qml" line="361"/>
