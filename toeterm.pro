@@ -37,7 +37,8 @@ TRANSLATIONS += translations/toeterm-ru.ts \
     translations/toeterm-sv.ts \
     translations/toeterm-nl_BE.ts \
     translations/toeterm-es.ts \
-    translations/toeterm-fi_FI.ts
+    translations/toeterm-fi_FI.ts \
+    translations/toeterm-zh_CN.ts
 
 DISTFILES += \
     translations/toeterm-nl.ts \
@@ -47,4 +48,5 @@ DISTFILES += \
     translations/toeterm-sv.ts \
     translations/toeterm-nl_BE.ts \
     translations/toeterm-es.ts \
-    translations/toeterm-fi_FI.ts
+    translations/toeterm-fi_FI.ts \
+    translations/toeterm-zh_CN.ts
