@@ -35,6 +35,7 @@ Rectangle {
     property int stickiness: 0      // current stickiness status
     property bool passiveKey: keyboard.isPassiveKey(code)
     property real labelOpacity: keyboard.active ? 1.0 : key.passiveKey ? 0.75 : 0.15
+    property real iconSize: Math.min(width, height)
 
     // mouse input handling
     property int clickThreshold: 20
@@ -69,8 +70,8 @@ Rectangle {
         id: keyImage
         anchors.centerIn: parent
 
-        width: parent.width
-        height: parent.width
+        width: iconSize
+        height: iconSize
         opacity: (key.label_alt == '' || !key.shiftActive) ? key.labelOpacity : 0
         Behavior on opacity {
             FadeAnimation {}
@@ -108,8 +109,8 @@ Rectangle {
     Image {
         id: capsImage
         anchors.centerIn: parent
-        width: parent.width * 0.9
-        height: parent.width * 0.9
+        width: iconSize * 0.9
+        height: iconSize * 0.9
         property real lop: key.labelOpacity
         opacity: lop * (stickiness == 0 ? 0.2 : 1)
         Behavior on opacity {
