@@ -222,6 +222,66 @@ Page {
                 buttonHeight: Theme.iconSizeLarge
                 title: qsTr("Settings")
                 content.sourceComponent: Column {
+                    ComboBox {
+                        id: orientationCombo
+                        width: parent.width
+                        label: qsTr("Allowed orientations")
+                        property string sAll: qsTr("All")
+                        property string sPort: qsTr("Portrait")
+                        property string sLand: qsTr("Landscape")
+                        property string sPortInv: qsTr("Portrait inverted")
+                        property string sLandInv: qsTr("Landscape inverted")
+                        menu: ContextMenu {
+                            id: orientationMenu
+                            MenuItem {
+                                text: orientationCombo.sAll
+                                onClicked: orientationCombo.orientationSave(15)
+                                highlighted: orientationCombo.value === text
+                            }
+                            MenuItem {
+                                text: orientationCombo.sPort
+                                onClicked: orientationCombo.orientationSave(1)
+                                highlighted: orientationCombo.value === text
+                            }
+                            MenuItem {
+                                text: orientationCombo.sLand
+                                onClicked: orientationCombo.orientationSave(2)
+                                highlighted: orientationCombo.value === text
+                            }
+                            MenuItem {
+                                text: orientationCombo.sPortInv
+                                onClicked: orientationCombo.orientationSave(4)
+                                highlighted: orientationCombo.value === text
+                            }
+                            MenuItem {
+                                text: orientationCombo.sLandInv
+                                onClicked: orientationCombo.orientationSave(8)
+                                highlighted: orientationCombo.value === text
+                            }
+                        }
+                        function orientationSave(newSetting) {
+                            newSetting = parseInt(newSetting)
+                            util.setSettingsValue("ui/allowedOrientations", newSetting)
+                            switch(newSetting){
+                            case 1: value  = sPort;    currentIndex = 1; break
+                            case 2: value  = sLand;    currentIndex = 2; break
+                            case 4: value  = sPortInv; currentIndex = 3; break
+                            case 8: value  = sLandInv; currentIndex = 4; break
+                            default: value = sAll;     currentIndex = 0;
+                            }
+                        }
+                        Component.onCompleted: {
+                            var newSetting = parseInt(util.settingsValue("ui/allowedOrientations"))
+                            switch(newSetting) {
+                            case 1: value = sPort;    currentIndex = 1; break;
+                            case 2: value = sLand;    currentIndex = 2; break;
+                            case 4: value = sPortInv; currentIndex = 3; break;
+                            case 8: value = sLandInv; currentIndex = 4; break;
+                            default: value = sAll;    currentIndex = 0;
+                            }
+                        }
+                        enabled: section4.expanded
+                    }
                     Slider {
                         enabled: section4.expanded
                         id: sizeSlider

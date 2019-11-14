@@ -228,6 +228,8 @@ void defaultSettings(QSettings* settings)
         settings->setValue("ui/showExtraLinesFromCursor", 2);
     if(!settings->contains("ui/dockLineviewToTop"))
         settings->setValue("ui/dockLineviewToTop", false);
+    if(!settings->contains("ui/allowedOrientations"))
+        settings->setValue("ui/allowedOrientations", 15); // Orientation.All
     if(!settings->contains("ui/vkbShowMethod"))
         settings->setValue("ui/vkbShowMethod", "move");  // "fade", "move", "off"
     if(!settings->contains("ui/keyPressFeedback"))

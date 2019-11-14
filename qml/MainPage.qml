@@ -42,6 +42,7 @@ Page {
 
     onStatusChanged: {
         if(status === PageStatus.Active) {
+            allowedOrientations = (parseInt(util.settingsValue("ui/allowedOrientations")) & Orientation.All)
             lineView.anchorToTop = util.settingsValueBool("ui/dockLineviewToTop")
             fadeTimer.interval = util.settingsValue("ui/keyboardFadeOutDelay")
         }
