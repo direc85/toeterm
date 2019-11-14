@@ -42,13 +42,6 @@ Rectangle {
         FadeAnimation { }
     }
 
-    Text {
-        id: fontHeightHack
-        visible: false
-        text: "X"
-        font: textrender.getFont()
-    }
-
     Rectangle {
         x: cursorX
         y: lineTextCol.y + lineTextCol.height/2 - height/2
@@ -69,7 +62,7 @@ Rectangle {
             model: lines
             delegate:
                 Rectangle {
-                height: fontHeightHack.height/2
+                height: textrender.fontHeight
                 width: lineTextCol.width
                 color: "transparent"
                 Text {
