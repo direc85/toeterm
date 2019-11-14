@@ -98,7 +98,7 @@ Rectangle {
                     rotation = 180
                 else if(key.label === ":backspace")
                     mirror = true
-                return "image://theme/" + keyboard.iconReference[key.label];
+                return "image://theme/" + keyboard.iconReference[key.label] + "?"+keyboard.keyFgColor;
             }
             else
                 return "";
@@ -116,7 +116,7 @@ Rectangle {
         Behavior on opacity {
             FadeAnimation {}
         }
-        source: "image://theme/icon-m-capslock"
+        source: "image://theme/icon-m-capslock?"+keyboard.keyFgColor
         visible: key.label == ":shift" && stickiness != 1
     }
 
