@@ -42,6 +42,7 @@ Page {
 
     onStatusChanged: {
         if(status === PageStatus.Active) {
+            lineView.anchorToTop = util.settingsValueBool("ui/dockLineviewToTop")
             fadeTimer.interval = util.settingsValue("ui/keyboardFadeOutDelay")
         }
     }
@@ -390,17 +391,22 @@ Page {
 
     Lineview {
         id: lineView
-        function updatePosition() {
-            if(anchorToTop)
-                y = 0
-            else
-                y = vkb.y - height
-        }
 
-        property bool anchorToTop: util.settingsValueBool("ui/dockLineviewToTop")
-        onAnchorToTopChanged: updatePosition()
-        x: 0
-        y: 0
+        states: [
+            State {
+                name: 'landscape';
+                when: lineView.anchorToTop === false
+                AnchorChanges {
+                    target: lineView
+                    anchors.top: undefined
+                    anchors.bottom: vkb.top
+                }
+            }
+        ]
+
+        property bool anchorToTop: true
+        anchors.top: parent.top
+        anchors.topMargin: undefined
         z: 20
         property int duration: 0;
         onFontPointSizeChanged: lineView.setVisibility(vkb.active)
@@ -415,7 +421,6 @@ Page {
         anchors.bottom: parent.bottom
         anchors.left: parent.left
         anchors.right: parent.right
-        onWidthChanged: lineView.updatePosition()
     }
 
     function showLayoutSwitcher(key) {
