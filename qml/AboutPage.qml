@@ -37,7 +37,9 @@ Page {
             }
             Image {
                 anchors.horizontalCenter: parent.horizontalCenter
-                source: "file:///usr/share/icons/hicolor/128x128/apps/toeterm.png"
+                source: "file:///usr/share/icons/hicolor/172x172/apps/toeterm.png"
+                width: Screen.width / 3
+                height: Screen.width / 3
             }
             Column {
                 width: parent.width
@@ -49,7 +51,7 @@ Page {
                     color: Theme.highlightColor
                     horizontalAlignment: Text.AlignHCenter
                     verticalAlignment: Text.AlignVCenter
-                    font.pixelSize: Theme.fontSizeMedium
+                    font.pixelSize: Theme.fontSizeLarge
                 }
                 Label {
                     anchors.right: parent.right
