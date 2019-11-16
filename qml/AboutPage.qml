@@ -37,7 +37,7 @@ Page {
             }
             Image {
                 anchors.horizontalCenter: parent.horizontalCenter
-                source: "qrc:///toeterm.png"
+                source: "file:///usr/share/icons/hicolor/128x128/apps/toeterm.png"
             }
             Column {
                 width: parent.width
