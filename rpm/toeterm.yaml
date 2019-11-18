@@ -1,7 +1,7 @@
 Name: toeterm
 Summary: A terminal emulator with a custom virtual keyboard
 # Checklist: util.cpp
-Version: 1.8
+Version: 1.8.1
 Release: 1
 Group: System/Base
 License: GPLv2
