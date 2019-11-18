@@ -6,7 +6,7 @@
     <message>
         <location filename="../qml/AboutPage.qml" line="36"/>
         <source>About</source>
-        <translation type="unfinished">Tietoja</translation>
+        <translation>Tietoja</translation>
     </message>
     <message>
         <location filename="../qml/AboutPage.qml" line="78"/>
@@ -21,12 +21,12 @@
     <message>
         <location filename="../qml/AboutPage.qml" line="118"/>
         <source>Based on ThumbTerm by Olli Vanhoja, which is fork of FingerTerm by Heikki Holstila</source>
-        <translation>Perustuu Olli Vanhojan ThumbTerm-sovellukseen, joka perustuu Heikki Holstilan FingerTerm-sovellukseen. </translation>
+        <translation>Perustuu Olli Vanhojan ThumbTerm-sovellukseen, joka perustuu Heikki Holstilan FingerTerm-sovellukseen</translation>
     </message>
     <message>
         <location filename="../qml/AboutPage.qml" line="130"/>
         <source>Config files for adjusting settings are at:</source>
-        <translation>Muokattavien asetustiedostojen sijainti</translation>
+        <translation>Muokattavien asetustiedostojen sijainti:</translation>
     </message>
 </context>
 <context>
@@ -88,32 +88,32 @@
     <message>
         <location filename="../qml/SettingsMenu.qml" line="228"/>
         <source>Allowed orientations</source>
-        <translation type="unfinished"></translation>
+        <translation>Näytön kääntösuunnat</translation>
     </message>
     <message>
         <location filename="../qml/SettingsMenu.qml" line="229"/>
         <source>All</source>
-        <translation type="unfinished"></translation>
+        <translation>Kaikki</translation>
     </message>
     <message>
         <location filename="../qml/SettingsMenu.qml" line="230"/>
         <source>Portrait</source>
-        <translation type="unfinished"></translation>
+        <translation>Pysty</translation>
     </message>
     <message>
         <location filename="../qml/SettingsMenu.qml" line="231"/>
         <source>Landscape</source>
-        <translation type="unfinished"></translation>
+        <translation>Vaaka</translation>
     </message>
     <message>
         <location filename="../qml/SettingsMenu.qml" line="232"/>
         <source>Portrait inverted</source>
-        <translation type="unfinished"></translation>
+        <translation>Pysty, käänteintn</translation>
     </message>
     <message>
         <location filename="../qml/SettingsMenu.qml" line="233"/>
         <source>Landscape inverted</source>
-        <translation type="unfinished"></translation>
+        <translation>Vaaka, käänteinen</translation>
     </message>
     <message>
         <location filename="../qml/SettingsMenu.qml" line="288"/>
@@ -178,22 +178,22 @@
     <message>
         <location filename="../qml/SettingsMenu.qml" line="357"/>
         <source>Highlight box extra lines</source>
-        <translation type="unfinished"></translation>
+        <translation>Koodilaatikon lisärivit</translation>
     </message>
     <message>
         <location filename="../qml/SettingsMenu.qml" line="373"/>
         <source>Highlight box position</source>
-        <translation type="unfinished"></translation>
+        <translation>Koodilaatikon sijainti</translation>
     </message>
     <message>
         <location filename="../qml/SettingsMenu.qml" line="374"/>
         <source>top</source>
-        <translation type="unfinished"></translation>
+        <translation>ylhäällä</translation>
     </message>
     <message>
         <location filename="../qml/SettingsMenu.qml" line="375"/>
         <source>bottom</source>
-        <translation type="unfinished"></translation>
+        <translation>alhaalla</translation>
     </message>
     <message>
         <location filename="../qml/SettingsMenu.qml" line="405"/>
