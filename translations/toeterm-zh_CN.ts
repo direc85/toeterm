@@ -6,7 +6,7 @@
     <message>
         <location filename="../qml/AboutPage.qml" line="36"/>
         <source>About</source>
-        <translation type="unfinished">关于</translation>
+        <translation>关于</translation>
     </message>
     <message>
         <location filename="../qml/AboutPage.qml" line="78"/>
@@ -88,32 +88,32 @@
     <message>
         <location filename="../qml/SettingsMenu.qml" line="228"/>
         <source>Allowed orientations</source>
-        <translation type="unfinished"></translation>
+        <translation>屏幕显示方向</translation>
     </message>
     <message>
         <location filename="../qml/SettingsMenu.qml" line="229"/>
         <source>All</source>
-        <translation type="unfinished"></translation>
+        <translation>所以</translation>
     </message>
     <message>
         <location filename="../qml/SettingsMenu.qml" line="230"/>
         <source>Portrait</source>
-        <translation type="unfinished"></translation>
+        <translation>仅竖屏</translation>
     </message>
     <message>
         <location filename="../qml/SettingsMenu.qml" line="231"/>
         <source>Landscape</source>
-        <translation type="unfinished"></translation>
+        <translation>仅横屏</translation>
     </message>
     <message>
         <location filename="../qml/SettingsMenu.qml" line="232"/>
         <source>Portrait inverted</source>
-        <translation type="unfinished"></translation>
+        <translation>竖屏可旋转</translation>
     </message>
     <message>
         <location filename="../qml/SettingsMenu.qml" line="233"/>
         <source>Landscape inverted</source>
-        <translation type="unfinished"></translation>
+        <translation>横屏可旋转</translation>
     </message>
     <message>
         <location filename="../qml/SettingsMenu.qml" line="288"/>
@@ -178,27 +178,27 @@
     <message>
         <location filename="../qml/SettingsMenu.qml" line="357"/>
         <source>Highlight box extra lines</source>
-        <translation type="unfinished"></translation>
+        <translation>高亮框边线</translation>
     </message>
     <message>
         <location filename="../qml/SettingsMenu.qml" line="373"/>
         <source>Highlight box position</source>
-        <translation type="unfinished"></translation>
+        <translation>高亮框位置</translation>
     </message>
     <message>
         <location filename="../qml/SettingsMenu.qml" line="374"/>
         <source>top</source>
-        <translation type="unfinished"></translation>
+        <translation>顶部</translation>
     </message>
     <message>
         <location filename="../qml/SettingsMenu.qml" line="375"/>
         <source>bottom</source>
-        <translation type="unfinished"></translation>
+        <translation>底部</translation>
     </message>
     <message>
         <location filename="../qml/SettingsMenu.qml" line="405"/>
         <source>Keyboard feedback</source>
-        <translation>键盘反馈</translation>
+        <translation>键盘振动反馈</translation>
     </message>
     <message>
         <location filename="../qml/SettingsMenu.qml" line="411"/>
