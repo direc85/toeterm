@@ -6,27 +6,27 @@
     <message>
         <location filename="../qml/AboutPage.qml" line="36"/>
         <source>About</source>
-        <translation type="unfinished">Acerca de</translation>
+        <translation>Acerca de</translation>
     </message>
     <message>
         <location filename="../qml/AboutPage.qml" line="78"/>
         <source>Terminal size</source>
-        <translation>Tamaño de terminal</translation>
+        <translation>Tamaño del terminal</translation>
     </message>
     <message>
         <location filename="../qml/AboutPage.qml" line="100"/>
         <source>Charset</source>
-        <translation>Carácteres</translation>
+        <translation>Juego de caracteres</translation>
     </message>
     <message>
         <location filename="../qml/AboutPage.qml" line="118"/>
         <source>Based on ThumbTerm by Olli Vanhoja, which is fork of FingerTerm by Heikki Holstila</source>
-        <translation>Basado en ThumbTerm de Olli Vanhoja, cual es un tenedor de FingerTerm por Heikki Holstila</translation>
+        <translation>Basado en ThumbTerm de Olli Vanhoja, un fork de FingerTerm desarrollado por Heikki Holstila</translation>
     </message>
     <message>
         <location filename="../qml/AboutPage.qml" line="130"/>
         <source>Config files for adjusting settings are at:</source>
-        <translation>Los archivos de configuración estan en:</translation>
+        <translation>Los archivos de configuración se almacenan en:</translation>
     </message>
 </context>
 <context>
@@ -34,7 +34,7 @@
     <message>
         <location filename="../qml/MainPage.qml" line="311"/>
         <source>An error occurred</source>
-        <translation>Ocurrió un error</translation>
+        <translation>Ha ocurrido un error</translation>
     </message>
 </context>
 <context>
@@ -68,7 +68,7 @@
     <message>
         <location filename="../qml/SettingsMenu.qml" line="153"/>
         <source>URL grabber</source>
-        <translation>Capturador</translation>
+        <translation>Prompt</translation>
     </message>
     <message>
         <location filename="../qml/SettingsMenu.qml" line="166"/>
@@ -78,7 +78,7 @@
     <message>
         <location filename="../qml/SettingsMenu.qml" line="190"/>
         <source>Keyboard layout</source>
-        <translation>Teclado</translation>
+        <translation>Distribución del teclado</translation>
     </message>
     <message>
         <location filename="../qml/SettingsMenu.qml" line="223"/>
@@ -88,32 +88,32 @@
     <message>
         <location filename="../qml/SettingsMenu.qml" line="228"/>
         <source>Allowed orientations</source>
-        <translation type="unfinished"></translation>
+        <translation>Orientación de pantalla</translation>
     </message>
     <message>
         <location filename="../qml/SettingsMenu.qml" line="229"/>
         <source>All</source>
-        <translation type="unfinished"></translation>
+        <translation>Todas</translation>
     </message>
     <message>
         <location filename="../qml/SettingsMenu.qml" line="230"/>
         <source>Portrait</source>
-        <translation type="unfinished"></translation>
+        <translation>Vertical</translation>
     </message>
     <message>
         <location filename="../qml/SettingsMenu.qml" line="231"/>
         <source>Landscape</source>
-        <translation type="unfinished"></translation>
+        <translation>Horizontal</translation>
     </message>
     <message>
         <location filename="../qml/SettingsMenu.qml" line="232"/>
         <source>Portrait inverted</source>
-        <translation type="unfinished"></translation>
+        <translation>Vertical invertida</translation>
     </message>
     <message>
         <location filename="../qml/SettingsMenu.qml" line="233"/>
         <source>Landscape inverted</source>
-        <translation type="unfinished"></translation>
+        <translation>Horizontal invertida</translation>
     </message>
     <message>
         <location filename="../qml/SettingsMenu.qml" line="288"/>
@@ -128,7 +128,7 @@
     <message>
         <location filename="../qml/SettingsMenu.qml" line="313"/>
         <source>Gestures</source>
-        <translation>Gestos</translation>
+        <translation>Gestual</translation>
     </message>
     <message>
         <location filename="../qml/SettingsMenu.qml" line="313"/>
@@ -143,7 +143,7 @@
     <message>
         <location filename="../qml/SettingsMenu.qml" line="323"/>
         <source>Keyboard behavior</source>
-        <translation>Modo de teclado</translation>
+        <translation>Comportamiento del teclado</translation>
     </message>
     <message>
         <location filename="../qml/SettingsMenu.qml" line="329"/>
@@ -153,7 +153,7 @@
     <message>
         <location filename="../qml/SettingsMenu.qml" line="329"/>
         <source>Fade</source>
-        <translation>Descolorar</translation>
+        <translation>Desvanecer</translation>
     </message>
     <message>
         <location filename="../qml/SettingsMenu.qml" line="329"/>
@@ -163,12 +163,12 @@
     <message>
         <location filename="../qml/SettingsMenu.qml" line="339"/>
         <source>Keyboard delay</source>
-        <translation>Retraso del teclado</translation>
+        <translation>Retardo del teclado</translation>
     </message>
     <message>
         <location filename="../qml/SettingsMenu.qml" line="343"/>
         <source>No delay</source>
-        <translation>Sin atraso</translation>
+        <translation>Sin retardo</translation>
     </message>
     <message>
         <location filename="../qml/SettingsMenu.qml" line="343"/>
@@ -178,47 +178,47 @@
     <message>
         <location filename="../qml/SettingsMenu.qml" line="357"/>
         <source>Highlight box extra lines</source>
-        <translation type="unfinished"></translation>
+        <translation>Realzado de líneas adicionales de cuadro</translation>
     </message>
     <message>
         <location filename="../qml/SettingsMenu.qml" line="373"/>
         <source>Highlight box position</source>
-        <translation type="unfinished"></translation>
+        <translation>Realzado de posición de cuadro</translation>
     </message>
     <message>
         <location filename="../qml/SettingsMenu.qml" line="374"/>
         <source>top</source>
-        <translation type="unfinished"></translation>
+        <translation>Arriba</translation>
     </message>
     <message>
         <location filename="../qml/SettingsMenu.qml" line="375"/>
         <source>bottom</source>
-        <translation type="unfinished"></translation>
+        <translation>Abajo</translation>
     </message>
     <message>
         <location filename="../qml/SettingsMenu.qml" line="405"/>
         <source>Keyboard feedback</source>
-        <translation>Retroalimentación del teclado</translation>
+        <translation>Teclado háptico</translation>
     </message>
     <message>
         <location filename="../qml/SettingsMenu.qml" line="411"/>
         <source>Charset</source>
-        <translation>Carácteres</translation>
+        <translation>Juego de caracteres</translation>
     </message>
     <message>
         <location filename="../qml/SettingsMenu.qml" line="420"/>
         <source>Custom</source>
-        <translation>Personalizar</translation>
+        <translation>Personalizado</translation>
     </message>
     <message>
         <location filename="../qml/SettingsMenu.qml" line="440"/>
         <source>Apply with Enter key</source>
-        <translation>Aplicar con tecla [Entrar]</translation>
+        <translation>Aplicar con la tecla [Intro]</translation>
     </message>
     <message>
         <location filename="../qml/SettingsMenu.qml" line="441"/>
         <source>Custom charset</source>
-        <translation>Personalizar carácteres</translation>
+        <translation>Juego de caracteres personalizado</translation>
     </message>
     <message>
         <location filename="../qml/SettingsMenu.qml" line="457"/>
@@ -228,7 +228,7 @@
     <message>
         <location filename="../qml/SettingsMenu.qml" line="469"/>
         <source>Color scheme</source>
-        <translation>Color</translation>
+        <translation>Esquema de colores</translation>
     </message>
 </context>
 </TS>
