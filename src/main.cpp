@@ -68,10 +68,6 @@ int main(int argc, char *argv[])
             execCmd = settings->value("gen/execCmd").toString();
         }
         if(execCmd.isEmpty()) {
-            // Unset POSIXLY_CORRECT as having it set causes bash to start in POSIX mode (http://www.delorie.com/gnu/docs/bash/bashref_62.html#IDX214)
-            // which causes it to not read the .bashrc on startup (http://lists.gnu.org/archive/html/bug-bash/2001-10/msg00117.html)
-            unsetenv("POSIXLY_CORRECT");
-
             // execute the user's default shell
             passwd *pwdstruct = getpwuid(getuid());
             execCmd = QString(pwdstruct->pw_shell);
