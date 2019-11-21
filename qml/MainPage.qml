@@ -369,24 +369,45 @@ Page {
         }
     }
 
-    Rectangle {
+    Text {
         // visual key press feedback...
         // easier to work with the coordinates if it's here and not under keyboard element
         id: visualKeyFeedbackRect
+        color: vkb.keyFgColor
+        font.pointSize: Theme.fontSizeLarge
         visible: false
-        x: 0
-        y: 0
         z: 200
-        width: 0
-        height: 0
-        radius: 5
-        color: vkb.indicatorColor
-        property string label: ""
-        Text {
-            color: "#FFFFFF"
-            font.pointSize: 64*window.pixelRatio
+
+        property int newX
+        onNewXChanged: {
+            // Language box? Always center.
+            if(text.length > 1) {
+                x = (parent.width / 2) - (width / 2)
+                return
+            }
+
+            // One key? Make sure it's shown fully.
+            if(newX - Theme.paddingLarge < 0)
+                x = Theme.paddingLarge
+            else if(newX + width + Theme.paddingLarge > parent.width)
+                x = parent.width - width - Theme.paddingLarge
+            else
+                x = newX
+            return
+        }
+
+        // Use newY for consistency
+        property int newY
+        y: newY
+
+        Rectangle {
             anchors.centerIn: parent
-            text: visualKeyFeedbackRect.label
+            height: parent.height + Theme.paddingLarge
+            width: Math.max(parent.width + Theme.paddingLarge, height * 0.8)
+            radius: 5
+            color: vkb.indicatorColor
+            clip: false
+            z: -1
         }
     }
 
@@ -425,17 +446,15 @@ Page {
     }
 
     function showLayoutSwitcher(key) {
-        visualKeyFeedbackRect.width = key.width*2
-        visualKeyFeedbackRect.height = key.height*2.5
         var mappedCoord = window.mapFromItem(key, 0, 0);
-        visualKeyFeedbackRect.x = mappedCoord.x - (visualKeyFeedbackRect.width-key.width)/2
-        visualKeyFeedbackRect.y = mappedCoord.y - key.height*2.5
+        visualKeyFeedbackRect.newX = mappedCoord.x - (visualKeyFeedbackRect.width-key.width)/2
+        visualKeyFeedbackRect.newY = mappedCoord.y - key.height*2.5
         visualKeyFeedbackRect.visible = true;
     }
 
     function setLayoutSwitcherText(kbdl) {
         kbdl = kbdl.charAt(0).toUpperCase() + kbdl.slice(1)
-        visualKeyFeedbackRect.label = kbdl
+        visualKeyFeedbackRect.text = kbdl
         window.wakeVKB();
     }
 
@@ -488,10 +507,10 @@ Page {
                                 key.handlePress(multiTouchArea, touchPoint.x, t_y);
                             } else if (keyLoader.availableLayouts().length > 1) {
                                 if (Math.abs(spaceXswipe - touchPoint.x) > 50) {
+                                    setLayoutSwitcherText(vkb.getLayoutNameAtPos(spaceXswipe < touchPoint.x - 50 ? -1 : 1));
                                     if (!visualKeyFeedbackRect.visible) {
                                         showLayoutSwitcher(multiTouchArea.pressedKeys[touchPoint.pointId]);
                                     }
-                                    setLayoutSwitcherText(vkb.getLayoutNameAtPos(spaceXswipe < touchPoint.x - 50 ? -1 : 1));
                                 } else {
                                     setLayoutSwitcherText(util.settingsValue("ui/keyboardLayout"));
                                 }

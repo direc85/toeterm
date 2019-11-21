@@ -99,12 +99,10 @@ Rectangle {
                 currentKeyPressed.currentLabel.length === 1 &&
                 currentKeyPressed.currentLabel !== " " &&
                 active) {
-            visualKeyFeedbackRect.label = currentKeyPressed.currentLabel
-            visualKeyFeedbackRect.width = currentKeyPressed.width*2
-            visualKeyFeedbackRect.height = currentKeyPressed.height*2.5
+            visualKeyFeedbackRect.text = currentKeyPressed.currentLabel
             var mappedCoord = window.mapFromItem(currentKeyPressed, 0, 0);
-            visualKeyFeedbackRect.x = mappedCoord.x - (visualKeyFeedbackRect.width-currentKeyPressed.width)/2
-            visualKeyFeedbackRect.y = mappedCoord.y - currentKeyPressed.height*2.5
+            visualKeyFeedbackRect.newX = mappedCoord.x - (visualKeyFeedbackRect.width-currentKeyPressed.width)/2
+            visualKeyFeedbackRect.newY = mappedCoord.y - currentKeyPressed.height*2.5
             visualKeyFeedbackRect.visible = true;
         } else {
             visualKeyFeedbackRect.visible = false;
