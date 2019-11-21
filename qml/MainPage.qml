@@ -307,8 +307,8 @@ Page {
         }
 
         Notification {
-                 id: errorNotification
-                 summary: qsTr("An error occurred")
+            id: errorNotification
+            summary: qsTr("An error occurred")
         }
 
         function showErrorMessage(string)
@@ -487,7 +487,7 @@ Page {
                             if (!spacePressed) {
                                 key.handlePress(multiTouchArea, touchPoint.x, t_y);
                             } else if (keyLoader.availableLayouts().length > 1) {
-                                 if (Math.abs(spaceXswipe - touchPoint.x) > 50) {
+                                if (Math.abs(spaceXswipe - touchPoint.x) > 50) {
                                     if (!visualKeyFeedbackRect.visible) {
                                         showLayoutSwitcher(multiTouchArea.pressedKeys[touchPoint.pointId]);
                                     }
