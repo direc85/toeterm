@@ -200,7 +200,7 @@ Page {
                 window.visualBell();
             }
             onGestureNotify: {
-                textNotify.text = msg;
+                textNotify.text = msg.replace("_"," ");
                 textNotifyAnim.enabled = false;
                 textNotify.opacity = 1.0;
                 textNotifyAnim.enabled = true;
@@ -453,7 +453,7 @@ Page {
     }
 
     function setLayoutSwitcherText(kbdl) {
-        kbdl = kbdl.charAt(0).toUpperCase() + kbdl.slice(1)
+        kbdl = kbdl.charAt(0).toUpperCase() + kbdl.slice(1).replace("_"," ")
         visualKeyFeedbackRect.text = kbdl
         window.wakeVKB();
     }
