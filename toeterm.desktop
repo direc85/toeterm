@@ -3,5 +3,5 @@ X-Nemo-Application-Type=silica-qt5
 Type=Application
 Name=ToeTerm
 Categories=Utility
-Exec=toeterm
+Exec=/usr/bin/invoker --single-instance --type=e /usr/bin/toeterm
 Icon=toeterm
