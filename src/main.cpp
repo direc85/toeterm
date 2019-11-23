@@ -122,6 +122,7 @@ int main(int argc, char *argv[])
     copyFileFromResources(":/data/german.layout", util.configPath()+"/german.layout");
     copyFileFromResources(":/data/qwertz.layout", util.configPath()+"/qwertz.layout");
     copyFileFromResources(":/data/english_extra.layout", util.configPath()+"/english_extra.layout");
+    copyFileFromResources(":/data/finnish_extra.layout", util.configPath()+"/finnish_extra.layout");
     copyFileFromResources(":/data/Default.colors", util.configPath()+"/Default.colors");
     copyFileFromResources(":/data/Solarized_Dark.colors", util.configPath()+"/Solarized_Dark.colors");
     copyFileFromResources(":/data/Solarized_Dark_Alternative.colors", util.configPath()+"/Solarized_Dark_Alternative.colors");
