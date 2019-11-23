@@ -563,17 +563,35 @@ Page {
             });
         }
     }
-    TextSwitch {
-        checked: true
-        x: parent.width - width/3.5
-        y: Theme.paddingMedium
-        width: Theme.iconSizeExtraLarge
+
+    // Top right corner light item.
+    // Inspired by /usr/lib/qt5/qml/Sailfish/Silica/TextSwitch.qml
+    Item {
+        width: Theme.iconSizeExtraLarge / 2
         height: Theme.iconSizeExtraLarge
-        onCheckedChanged: {
-            if(checked === false)
-                pageStack.push(settingsPagePath)
-            checked = true
-        }
         z: 100
+        y: -height * 0.075
+        anchors.right: parent.right
+        GlassItem {
+            id: glass
+            z: 1
+            anchors {
+                left: parent.left
+                top: parent.top
+            }
+            width: Theme.iconSizeExtraLarge
+            height: Theme.iconSizeExtraLarge
+            dimmed: true
+            highlighted: false
+            color: highlighted ? Theme.highlightColor
+                               : dimmed ? Theme.primaryColor : Theme.lightPrimaryColor
+        }
+        MouseArea {
+            z: 2
+            anchors.fill: parent
+            onClicked: pageStack.push(settingsPagePath)
+            onPressed: glass.highlighted = true
+            onReleased: glass.highlighted = false
+        }
     }
 }
