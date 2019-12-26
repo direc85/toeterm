@@ -93,7 +93,7 @@
     <message>
         <location filename="../qml/SettingsMenu.qml" line="229"/>
         <source>All</source>
-        <translation>所以</translation>
+        <translation>所有</translation>
     </message>
     <message>
         <location filename="../qml/SettingsMenu.qml" line="230"/>
