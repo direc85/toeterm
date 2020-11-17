@@ -1,7 +1,7 @@
 /*
     ThumbTerm Copyright Olli Vanhoja
     FingerTerm Copyright 2011-2012 Heikki Holstila <heikki.holstila@gmail.com>
-    ToeTerm Copyright 2018 ROZZ, 2019 Matti Viljanen
+    ToeTerm Copyright 2018 ROZZ, 2019-2020 Matti Viljanen <matti.viljanen@kapsi.fi>
 
     This file is part of ToeTerm.
 
