@@ -34,7 +34,11 @@ RESOURCES += \
     resources.qrc
 
 target.path = /usr/bin
-INSTALLS += target
+
+images.files = images
+images.path = /usr/share/$${TARGET}
+
+INSTALLS += target images
 
 SAILFISHAPP_ICONS = 86x86 108x108 128x128 172x172
 
@@ -49,6 +53,7 @@ TRANSLATIONS += translations/toeterm-ru.ts \
     translations/toeterm-zh_CN.ts
 
 DISTFILES += \
+    qml/AboutLabel.qml \
     translations/toeterm-nl.ts \
     translations/toeterm-ru.ts \
     rpm/toeterm.yaml \

@@ -1,5 +1,6 @@
 <RCC>
     <qresource prefix="/">
+        <file>qml/AboutLabel.qml</file>
         <file>qml/AboutPage.qml</file>
         <file>qml/Key.qml</file>
         <file>qml/Keyboard.qml</file>

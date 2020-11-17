@@ -24,126 +24,128 @@ import Sailfish.Silica 1.0
 
 Page {
     id: aboutPage
-    allowedOrientations: Orientation.All
+
+    allowedOrientations: Orientation.Portrait | Orientation.Landscape | Orientation.LandscapeInverted
+
     SilicaFlickable {
+        id: aboutFlickable
         anchors.fill: parent
-        contentHeight: column.height + Theme.paddingLarge
+        contentHeight: header.height + column.height
+
+        VerticalScrollDecorator {
+            flickable: aboutFlickable
+        }
+
+        PageHeader {
+            id: header
+            title: qsTr("About")
+        }
+
         Column {
             id: column
-            width: parent.width
-            spacing: Theme.paddingLarge
-            PageHeader {
-                title: qsTr("About")
+            anchors {
+                top: header.bottom
+                horizontalCenter: parent.horizontalCenter
             }
+            width: Math.min(Screen.width, aboutFlickable.width)
+            spacing: Theme.paddingLarge
+
             Image {
                 anchors.horizontalCenter: parent.horizontalCenter
                 source: "file:///usr/share/icons/hicolor/172x172/apps/toeterm.png"
-                width: Screen.width / 3
-                height: Screen.width / 3
+                width: Theme.iconSizeExtraLarge
+                height: Theme.iconSizeExtraLarge
+                smooth: true
+                asynchronous: true
             }
-            Column {
-                width: parent.width
-                spacing: Theme.paddingSmall
-                Label {
-                    anchors.left: parent.left
-                    anchors.right: parent.right
-                    text: "ToeTerm " + util.versionString()
-                    color: Theme.highlightColor
-                    horizontalAlignment: Text.AlignHCenter
-                    verticalAlignment: Text.AlignVCenter
-                    font.pixelSize: Theme.fontSizeLarge
-                }
-                Label {
-                    anchors.right: parent.right
-                    anchors.left: parent.left
-                    text: "by ROZZ & direc85"
-                    color: Theme.rgba(Theme.highlightColor, 0.5)
-                    horizontalAlignment: Text.AlignHCenter
-                    verticalAlignment: Text.AlignVCenter
-                    font.pixelSize: Theme.fontSizeSmall
 
-                }
-            }
-            Column {
-                width: parent.width
-                spacing: Theme.paddingSmall
-                Rectangle {
-                    width: parent.width
-                    height: nameText1.height
-                    color: "transparent"
-                    Label {
-                        id: nameText1
-                        x: 0
-                        width: parent.width/2 - Theme.paddingMedium/2
-                        text: qsTr("Terminal size")
-                        font.pixelSize: Theme.fontSizeSmall
-                        color: Theme.rgba(Theme.highlightColor, 0.5)
-                        horizontalAlignment: Text.AlignRight
-                    }
-                    Label {
-                        x: parent.width/2 + Theme.paddingMedium/2
-                        width: parent.width/2 - Theme.paddingMedium/2
-                        text: term.termSize().width + "×" + term.termSize().height
-                        font.pixelSize: Theme.fontSizeSmall
-                        color: Theme.highlightColor
-                        horizontalAlignment: Text.AlignLeft
-                    }
-                }
-                Rectangle {
-                    width: parent.width
-                    height: nameText1.height
-                    color: "transparent"
-                    Label {
-                        id: nameText2
-                        x: 0
-                        width: parent.width/2 - Theme.paddingMedium/2
-                        text: qsTr("Charset")
-                        font.pixelSize: Theme.fontSizeSmall
-                        color: Theme.rgba(Theme.highlightColor, 0.5)
-                        horizontalAlignment: Text.AlignRight
-                    }
-                    Label {
-                        x: parent.width/2 + Theme.paddingMedium/2
-                        width: parent.width/2 - Theme.paddinMedium/2
-                        text: util.settingsValue("terminal/charset")
-                        font.pixelSize: Theme.fontSizeSmall
-                        color: Theme.highlightColor
-                        horizontalAlignment: Text.AlignLeft
-                    }
-                }
-            }
-            Label {
-                x: Theme.paddingLarge
-                width: parent.width - Theme.paddingLarge * 2
-                text: qsTr("Based on ThumbTerm by Olli Vanhoja, which is fork of FingerTerm by Heikki Holstila")
-                horizontalAlignment: Text.AlignLeft
-                verticalAlignment: Text.AlignVCenter
-                font.pixelSize: Theme.fontSizeExtraSmall
-                wrapMode: Text.Wrap
+            AboutLabel {
+                font.pixelSize: Theme.fontSizeLarge
                 color: Theme.highlightColor
+                text: "ToeTerm" + util.versionString()
             }
-            Column {
+
+            AboutLabel {
+                font.pixelSize: Theme.fontSizeMedium
+                color: Theme.secondaryHighlightColor
+                text: "by ROZZ & direc85"
+            }
+
+            AboutLabel {
+                font.pixelSize: Theme.fontSizeMedium
+                text: qsTr("Based on ThumbTerm by Olli Vanhoja, which is fork of FingerTerm by Heikki Holstila")
+            }
+
+            DetailItem {
+                label: qsTr("Terminal size")
+                value: term.termSize().width + "×" + term.termSize().height
+            }
+
+            DetailItem {
+                label: qsTr("Charset")
+                value: util.settingsValue("terminal/charset")
+            }
+
+            AboutLabel {
+                font.pixelSize: Theme.fontSizeSmall
+                color: Theme.highlightColor
+                text: qsTr("Config files for adjusting settings are at:")
+            }
+
+            AboutLabel {
+                font.pixelSize: Theme.fontSizeSmall
+                color: Theme.secondaryHighlightColor
+                text: util.configPath() + "/"
+            }
+
+            BackgroundItem {
+                anchors.horizontalCenter: parent.horizontalCenter
+                width: Theme.iconSizeExtraLarge * 1.2
+                height: Theme.iconSizeExtraLarge * 1.2
+                onClicked: Qt.openUrlExternally("https://ko-fi.com/direc85")
+                contentItem.radius: Theme.paddingSmall
+
+                Image {
+                    anchors.centerIn: parent
+                    source: "file:///usr/share/toeterm/images/Ko-fi_Icon_RGB_rounded.png"
+                    width: Theme.iconSizeExtraLarge
+                    height: Theme.iconSizeExtraLarge
+                    smooth: true
+                    asynchronous: true
+                }
+            }
+
+            AboutLabel {
+                font.pixelSize: Theme.fontSizeSmall
+                color: Theme.secondaryColor
+                text: qsTr("If you like my work and would like to support me, you can buy me a coffee!")
+            }
+
+/*
+
+            // Translations credits will be added in a later release
+            AboutLabel {
+                font.pixelSize: Theme.fontSizeMedium
+                color: Theme.primaryColor
+                text: qsTr("Translations")
+            }
+
+            AboutLabel {
+                font.pixelSize: Theme.fontSizeSmall
+                color: Theme.secondaryColor
+                text: "Suomi: Matti Viljanen"
+            }
+*/
+
+            Button {
+                text: "GitHub"
+                anchors.horizontalCenter: parent.horizontalCenter
+                onClicked: Qt.openUrlExternally("https://github.com/direc85/toeterm")
+            }
+
+            Item {
                 width: parent.width
-                Label {
-                    x: Theme.paddingLarge
-                    width: parent.width - Theme.paddingLarge * 2
-                    text: qsTr("Config files for adjusting settings are at:")
-                    horizontalAlignment: Text.AlignLeft
-                    verticalAlignment: Text.AlignVCenter
-                    font.pixelSize: Theme.fontSizeExtraSmall
-                    wrapMode: Text.Wrap
-                    color: Theme.highlightColor
-                }
-                Label {
-                    x: Theme.paddingLarge
-                    width: parent.width - Theme.paddingLarge * 2
-                    text: util.configPath()
-                    horizontalAlignment: Text.AlignLeft
-                    verticalAlignment: Text.AlignVCenter
-                    font.pixelSize: Theme.fontSizeExtraSmall
-                    wrapMode: Text.Wrap
-                    color: Theme.rgba(Theme.highlightColor, 0.5)
-                }
+                height: Theme.paddingMedium
             }
         }
     }

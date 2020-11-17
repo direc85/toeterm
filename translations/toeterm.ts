@@ -4,28 +4,33 @@
 <context>
     <name>AboutPage</name>
     <message>
-        <location filename="../qml/AboutPage.qml" line="36"/>
+        <location filename="../qml/AboutPage.qml" line="41"/>
         <source>About</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/AboutPage.qml" line="78"/>
+        <location filename="../qml/AboutPage.qml" line="80"/>
         <source>Terminal size</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/AboutPage.qml" line="100"/>
+        <location filename="../qml/AboutPage.qml" line="85"/>
         <source>Charset</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/AboutPage.qml" line="118"/>
+        <location filename="../qml/AboutPage.qml" line="76"/>
         <source>Based on ThumbTerm by Olli Vanhoja, which is fork of FingerTerm by Heikki Holstila</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/AboutPage.qml" line="130"/>
+        <location filename="../qml/AboutPage.qml" line="92"/>
         <source>Config files for adjusting settings are at:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/AboutPage.qml" line="121"/>
+        <source>If you like my work and would like to support me, you can buy me a coffee!</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

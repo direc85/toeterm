@@ -4,29 +4,34 @@
 <context>
     <name>AboutPage</name>
     <message>
-        <location filename="../qml/AboutPage.qml" line="36"/>
+        <location filename="../qml/AboutPage.qml" line="41"/>
         <source>About</source>
         <translation>关于</translation>
     </message>
     <message>
-        <location filename="../qml/AboutPage.qml" line="78"/>
+        <location filename="../qml/AboutPage.qml" line="80"/>
         <source>Terminal size</source>
         <translation>Terminal 大小</translation>
     </message>
     <message>
-        <location filename="../qml/AboutPage.qml" line="100"/>
+        <location filename="../qml/AboutPage.qml" line="85"/>
         <source>Charset</source>
         <translation>字符集</translation>
     </message>
     <message>
-        <location filename="../qml/AboutPage.qml" line="118"/>
+        <location filename="../qml/AboutPage.qml" line="76"/>
         <source>Based on ThumbTerm by Olli Vanhoja, which is fork of FingerTerm by Heikki Holstila</source>
         <translation>基于 OlliVanhoja 开发的 ThumbTerm(即 Heukki Holstila 开发的 FingerTerm 的分支软件)。</translation>
     </message>
     <message>
-        <location filename="../qml/AboutPage.qml" line="130"/>
+        <location filename="../qml/AboutPage.qml" line="92"/>
         <source>Config files for adjusting settings are at:</source>
         <translation>用以调整设置的配置文件位于:</translation>
+    </message>
+    <message>
+        <location filename="../qml/AboutPage.qml" line="121"/>
+        <source>If you like my work and would like to support me, you can buy me a coffee!</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
