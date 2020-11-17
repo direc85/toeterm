@@ -3,7 +3,7 @@ CONFIG += sailfishapp link_pkgconfig
 PKGCONFIG += sailfishapp nemonotifications-qt5
 LIBS += -lutil
 
-VER = 1.9.2
+VER = 1.9.3
 REL = 1
 
 VERSION = $${VER}-$${REL}
