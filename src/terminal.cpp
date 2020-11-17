@@ -249,8 +249,17 @@ void Terminal::keyPress(int key, int modifiers)
         toWrite += QString("%1[3~").arg(ch_ESC).toLatin1();
     if( key==Qt::Key_Escape )
         toWrite += QString(1,ch_ESC);
-    if (key >= 0x01000030 && key <= 0x0100003b)
-        toWrite += (QString("%1[").arg(ch_ESC) + QString::number(key-0x1000025) + QString("~")).toLatin1();
+    if (key >= 0x01000030 && key <= 0x0100003b) {
+        // For some reason, function key escape sequence codes skip a few numbers..?
+        // See e.g. https://invisible-island.net/xterm/xterm-function-keys.html
+        int f_seq = key-0x1000025;
+        if(f_seq > 21)
+            f_seq = f_seq + 2;
+        else if(f_seq > 15)
+            f_seq = f_seq + 1;
+
+        toWrite += (QString("%1[").arg(ch_ESC) + QString::number(f_seq) + QString("~")).toLatin1();
+    }
 
     if(iPtyIFace)
         iPtyIFace->writeTerm(toWrite);
