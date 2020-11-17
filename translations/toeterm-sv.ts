@@ -31,7 +31,7 @@
     <message>
         <location filename="../qml/AboutPage.qml" line="121"/>
         <source>If you like my work and would like to support me, you can buy me a coffee!</source>
-        <translation type="unfinished"></translation>
+        <translation>Om du gillar mitt arbete och vill stödja mig, får du gärna bjuda mig på en kopp kaffe!</translation>
     </message>
 </context>
 <context>
