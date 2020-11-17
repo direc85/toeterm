@@ -34,10 +34,11 @@
 
 #include <QFeedbackEffect>
 
-Util::Util(QSettings *settings, QObject *parent) :
+Util::Util(QSettings *settings, QString version, QObject *parent) :
     QObject(parent),
     iAllowGestures(false),
     newSelection(true),
+    iVersionString(version),
     iSettings(settings),
     iRenderer(0)
 {
@@ -115,7 +116,7 @@ void Util::setSettingsValue(QString key, QVariant value)
 
 QString Util::versionString()
 {
-    return "1.9.1-1";
+    return iVersionString;
 }
 
 int Util::uiFontSize()

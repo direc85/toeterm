@@ -3,6 +3,14 @@ CONFIG += sailfishapp link_pkgconfig
 PKGCONFIG += sailfishapp nemonotifications-qt5
 LIBS += -lutil
 
+VER = 1.9.1
+REL = 1
+
+VERSION = $${VER}-$${REL}
+$$system(bash update-spec-version.sh $$TARGET $$VER $$REL)
+DEFINES += APP_VERSION=\"\\\"$$VERSION\\\"\"
+DEFINES += APP_NAME=\"\\\"$$TARGET\\\"\"
+
 QT += feedback
 
 HEADERS += \

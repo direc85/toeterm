@@ -109,7 +109,7 @@ int main(int argc, char *argv[])
     qmlRegisterType<TextRender>("TextRender",1,0,"TextRender");
 
     Terminal term;
-    Util util(settings);
+    Util util(settings, APP_VERSION);
     term.setUtil(&util);
     QString startupErrorMsg;
 

@@ -32,7 +32,7 @@ class Util : public QObject
 {
     Q_OBJECT
 public:
-    explicit Util(QSettings* settings, QObject *parent = 0);
+    explicit Util(QSettings* settings, QString version = "", QObject *parent = nullptr);
     virtual ~Util();
     void setWindowTitle(QString title);
     Q_INVOKABLE QString currentWindowTitle();
@@ -101,6 +101,7 @@ private:
     bool newSelection;
 
     QString iCurrentWinTitle;
+    QString iVersionString;
 
     QSettings* iSettings;
     Terminal* iTerm;
