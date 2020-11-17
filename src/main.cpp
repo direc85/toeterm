@@ -113,20 +113,20 @@ int main(int argc, char *argv[])
     term.setUtil(&util);
     QString startupErrorMsg;
 
-    // copy the default config files to the config dir if they don't already exist
+    // Copy the default config files to the config dir, if they don't already exist.
     copyFileFromResources(":/data/menu.xml", util.configPath()+"/menu.xml");
-    copyFileFromResources(":/data/english.layout", util.configPath()+"/english.layout");
-    copyFileFromResources(":/data/russian.layout", util.configPath()+"/russian.layout");
-    copyFileFromResources(":/data/finnish.layout", util.configPath()+"/finnish.layout");
-    copyFileFromResources(":/data/french.layout", util.configPath()+"/french.layout");
-    copyFileFromResources(":/data/german.layout", util.configPath()+"/german.layout");
-    copyFileFromResources(":/data/qwertz.layout", util.configPath()+"/qwertz.layout");
-    copyFileFromResources(":/data/english_extra.layout", util.configPath()+"/english_extra.layout");
-    copyFileFromResources(":/data/finnish_extra.layout", util.configPath()+"/finnish_extra.layout");
     copyFileFromResources(":/data/Default.colors", util.configPath()+"/Default.colors");
     copyFileFromResources(":/data/Solarized_Dark.colors", util.configPath()+"/Solarized_Dark.colors");
     copyFileFromResources(":/data/Solarized_Dark_Alternative.colors", util.configPath()+"/Solarized_Dark_Alternative.colors");
     copyFileFromResources(":/data/Solarized_Light.colors", util.configPath()+"/Solarized_Light.colors");
+
+    // Assume every language comes with the "extra" (F1...F12) flavor.
+    QStringList layouts;
+    layouts << "english" << "russian" << "finnish" << "french" << "german" << "qwertz";
+    for(QString layout : layouts) {
+        copyFileFromResources(QString(":/data/%1.layout").arg(layout), QString(util.configPath()+"/%1.layout").arg(layout));
+        copyFileFromResources(QString(":/data/%1_extra.layout").arg(layout), QString(util.configPath()+"/%1_extra.layout").arg(layout));
+    }
 
     KeyLoader keyLoader;
     keyLoader.setUtil(&util);

@@ -8,17 +8,21 @@
         <file>qml/MainPage.qml</file>
         <file>qml/SettingsMenu.qml</file>
         <file>data/english.layout</file>
+        <file>data/english_extra.layout</file>
         <file>data/Default.colors</file>
         <file>data/finnish.layout</file>
+        <file>data/finnish_extra.layout</file>
         <file>data/french.layout</file>
+        <file>data/french_extra.layout</file>
         <file>data/german.layout</file>
+        <file>data/german_extra.layout</file>
         <file>data/menu.xml</file>
         <file>data/qwertz.layout</file>
+        <file>data/qwertz_extra.layout</file>
         <file>data/russian.layout</file>
+        <file>data/russian_extra.layout</file>
         <file>data/Solarized_Dark_Alternative.colors</file>
         <file>data/Solarized_Dark.colors</file>
         <file>data/Solarized_Light.colors</file>
-        <file>data/english_extra.layout</file>
-        <file>data/finnish_extra.layout</file>
     </qresource>
 </RCC>
