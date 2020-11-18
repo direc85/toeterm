@@ -6,7 +6,7 @@
     <message>
         <location filename="../qml/AboutPage.qml" line="41"/>
         <source>About</source>
-        <translation type="unfinished">Om</translation>
+        <translation>Om</translation>
     </message>
     <message>
         <location filename="../qml/AboutPage.qml" line="80"/>
@@ -93,32 +93,32 @@
     <message>
         <location filename="../qml/SettingsMenu.qml" line="228"/>
         <source>Allowed orientations</source>
-        <translation type="unfinished"></translation>
+        <translation>Tillåtna orienteringar</translation>
     </message>
     <message>
         <location filename="../qml/SettingsMenu.qml" line="229"/>
         <source>All</source>
-        <translation type="unfinished"></translation>
+        <translation>Alla</translation>
     </message>
     <message>
         <location filename="../qml/SettingsMenu.qml" line="230"/>
         <source>Portrait</source>
-        <translation type="unfinished"></translation>
+        <translation>Stående</translation>
     </message>
     <message>
         <location filename="../qml/SettingsMenu.qml" line="231"/>
         <source>Landscape</source>
-        <translation type="unfinished"></translation>
+        <translation>Liggande</translation>
     </message>
     <message>
         <location filename="../qml/SettingsMenu.qml" line="232"/>
         <source>Portrait inverted</source>
-        <translation type="unfinished"></translation>
+        <translation>Inverterat stående</translation>
     </message>
     <message>
         <location filename="../qml/SettingsMenu.qml" line="233"/>
         <source>Landscape inverted</source>
-        <translation type="unfinished"></translation>
+        <translation>Inverterat liggande</translation>
     </message>
     <message>
         <location filename="../qml/SettingsMenu.qml" line="288"/>
@@ -183,22 +183,22 @@
     <message>
         <location filename="../qml/SettingsMenu.qml" line="357"/>
         <source>Highlight box extra lines</source>
-        <translation type="unfinished"></translation>
+        <translation>Markeringsruta extra rader</translation>
     </message>
     <message>
         <location filename="../qml/SettingsMenu.qml" line="373"/>
         <source>Highlight box position</source>
-        <translation type="unfinished"></translation>
+        <translation>Markeringsruta position</translation>
     </message>
     <message>
         <location filename="../qml/SettingsMenu.qml" line="374"/>
         <source>top</source>
-        <translation type="unfinished"></translation>
+        <translation>överkant</translation>
     </message>
     <message>
         <location filename="../qml/SettingsMenu.qml" line="375"/>
         <source>bottom</source>
-        <translation type="unfinished"></translation>
+        <translation>underkant</translation>
     </message>
     <message>
         <location filename="../qml/SettingsMenu.qml" line="405"/>
