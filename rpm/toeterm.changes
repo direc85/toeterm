@@ -1,0 +1,83 @@
+* 1.9.4-1 by direc85
+- Code quality and correctness improvements
+- Improve string and memory handling during process forking
+
+* 1.9.3-1 by direc85
+- Add experimental aarch64 build (testers needed!)
+- Fix broken F6...F11 keys (hopefully)
+- Add F12 as Shift+Esc
+- Add function key layouts to all languages
+- Fix layout documentation URL
+- About page rewritten
+
+* 1.9.2-1 by direc85
+- Automate version bump
+- Adjust key press rectangle position
+
+* 1.9.1-1 by direc85
+- Fix navigation dot misplacement on Jolla Tablet
+- Add Finnish layout with function keys
+
+* 1.9.0-1 by direc85
+- Execute .bashrc on startup; terminal starts in home directory (from Fingerterm source)
+- Start binary using invoker (from Fingerterm source)
+- Fix visual keyboard feedback box position and rendering
+- Remove underscores from displayed layout names
+
+* 1.8.1-1 by direc85
+- Update Chinise translation (thanks, dashinfantry!)
+- Update Spanish translation (thanks, ferlanero!)
+- Update Finnish translation
+
+* 1.8.0-1 by direc85
+- Initial support for Light Ambiences
+- Added orientation locking
+- Major updates to "Fade" mode code box
+- Add line count setting to "Fade" code box
+- Chinise translation added
+- Apply keyboard fade timer properly
+- About page layout updates
+
+* 1.7.0-1 by dire85
+- Fix key icon sizes in e.g. XA2 Ultra
+- Use less intrusive key icons
+- Minor tweaks in Settings page
+- Add Finnish translations
+- Don't push Settings page twice
+- Code cleanup, project housekeeping
+
+* 1.6.0-1 by ROZZ
+- Function keys support
+- English layout with function keys added
+- Minor keyboard fixes
+- Ability to turn on an off layouts
+- Backspace is now passive
+- Cursor and text position are now truly accurate
+- Any font size is available
+- ANSI ESC fixes ([J, [K)
+- Fix translations location
+
+* 1.5-1 by ROZZ
+- Update Swedish translation (thanks, eson57)
+- Add Spanish translation (thanks, Caballlero)
+- Update Dutch and Flemish translations (thanks, d9h20f)
+- Add icons to virtual keyboard
+- Sticky keys fixes
+
+* 1.4-1 by ROZZ
+- Add Swedish translation (thanks, eson57)
+- Fix keyboard sticky keys
+- Update Russian translation
+- Update Dutch translation
+- Project files improvements and corrections
+- Fix copy button activation
+
+* 1.3-1 by ROZZ
+- Add virtual keyboard background color and transparency
+- Add layout switching
+
+* 1.2-1 by ROZZ
+- Add colors, background and themes
+- Add Russian keyboard layout
+- Add Dutch translations (thanks, d9h20f)
+- Fix keyboard layour error message
