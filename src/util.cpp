@@ -40,7 +40,7 @@ Util::Util(QSettings *settings, QString version, QObject *parent) :
     newSelection(true),
     iVersionString(version),
     iSettings(settings),
-    iRenderer(0)
+    iRenderer(nullptr)
 {
     swipeModeSet = false;
     swipeAllowed = true;
@@ -183,8 +183,8 @@ void Util::mouseRelease(float eventX, float eventY) {
         return;
 
     if(settingsValue("ui/dragMode")=="gestures") {
-        int xdist = qAbs(eventPos.x() - dragOrigin.x());
-        int ydist = qAbs(eventPos.y() - dragOrigin.y());
+        int xdist = static_cast<int>(qAbs(eventPos.x() - dragOrigin.x()));
+        int ydist = static_cast<int>(qAbs(eventPos.y() - dragOrigin.y()));
         if(eventPos.x() < dragOrigin.x()-reqDragLength && xdist > ydist*2)
             doGesture(PanLeft);
         else if(eventPos.x() > dragOrigin.x()+reqDragLength && xdist > ydist*2)
@@ -229,7 +229,7 @@ bool Util::scrollBackBuffer(QPointF now, QPointF last)
     if (iRenderer->fontHeight() < 1)
         return false;
 
-    int nbLines = ydist / iRenderer->fontHeight();
+    int nbLines = qFloor(ydist / iRenderer->fontHeight());
 
     if (nbLines < 1)
         return false;

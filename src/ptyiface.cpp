@@ -42,7 +42,7 @@ static int childProcessPid = 0;
 void sighandler(int sig)
 {
     if(sig==SIGCHLD) {
-        int pid = wait(NULL);
+        int pid = wait(nullptr);
 
         if(pid > 0 && childProcessPid > 0 &&  pid==childProcessPid) {
             childProcessQuit = true;
@@ -58,8 +58,8 @@ PtyIFace::PtyIFace(int pid, int masterFd, Terminal *term, QString charset, QObje
     iPid(pid),
     iMasterFd(masterFd),
     iFailed(false),
-    iReadNotifier(0),
-    iTextCodec(0)
+    iReadNotifier(nullptr),
+    iTextCodec(nullptr)
 {
     childProcessPid = iPid;
 
@@ -116,8 +116,8 @@ void PtyIFace::resize(QSize newSize)
         return;
 
     winsize winp;
-    winp.ws_col = newSize.width();
-    winp.ws_row = newSize.height();
+    winp.ws_col = static_cast<unsigned short>(newSize.width());
+    winp.ws_row = static_cast<unsigned short>(newSize.height());
 
     ioctl(iMasterFd, TIOCSWINSZ, &winp);
 }
@@ -132,7 +132,7 @@ void PtyIFace::writeTerm(const QByteArray &chars)
     if(childProcessQuit)
         return;
 
-    int ret = write(iMasterFd, chars, chars.size());
+    int ret = write(iMasterFd, chars, static_cast<unsigned int>(chars.size()));
     if(ret != chars.size())
         qDebug() << "write error!";
 }
@@ -147,6 +147,6 @@ void PtyIFace::readTerm(QByteArray &chars)
     while(ret != -1) {
         ret = read(iMasterFd, &ch, 64);
         if(ret > 0)
-            chars.append((char*)&ch, ret);
+            chars.append(static_cast<const char*>(ch), ret);
     }
 }

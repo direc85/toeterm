@@ -28,8 +28,8 @@
 
 TextRender::TextRender(QQuickItem *parent) :
     QQuickPaintedItem(parent),
-    iTerm(0),
-    iUtil(0)
+    iTerm(nullptr),
+    iUtil(nullptr)
 {
     setFlag(ItemHasContents);
     connect(this,SIGNAL(myWidthChanged(int)),this,SLOT(updateTermSize()));
@@ -218,14 +218,14 @@ void TextRender::paintFromBuffer(QPainter* painter, QList<QList<TermChar> >& buf
     TermChar tmp = iTerm->zeroChar;
     TermChar nextAttrib = iTerm->zeroChar;
     TermChar currAttrib = iTerm->zeroChar;
-    float currentX = leftmargin;
+    int currentX = leftmargin;
     for(int i=from; i<to; i++) {
         y += iFontHeight;
 
         if(y >= cutAfter)
-            painter->setOpacity(0.3);
+            painter->setOpacity(static_cast<qreal>(0.3));
         else
-            painter->setOpacity(1.0);
+            painter->setOpacity(static_cast<qreal>(1.0));
 
         int xcount = qMin(buffer.at(i).count(), iTerm->termSize().width());
 
@@ -287,7 +287,7 @@ void TextRender::paintFromBuffer(QPainter* painter, QList<QList<TermChar> >& buf
     }
 }
 
-void TextRender::drawBgFragment(QPainter* painter, float x, float y, float width, TermChar style)
+void TextRender::drawBgFragment(QPainter* painter, int x, int y, int width, TermChar style)
 {
     int bg = style.bgColor;
     int fg = style.fgColor;
@@ -304,7 +304,7 @@ void TextRender::drawBgFragment(QPainter* painter, float x, float y, float width
     painter->drawRect(x, y, width, iFontHeight);
 }
 
-void TextRender::drawTextFragment(QPainter* painter, float x, float y, QString text, TermChar style)
+void TextRender::drawTextFragment(QPainter* painter, int x, int y, QString text, TermChar style)
 {
     int bg = style.bgColor;
     int fg = style.fgColor;

@@ -29,7 +29,7 @@ KeyLoader::KeyLoader(QObject *parent) :
     QObject(parent),
     iVkbRows(0),
     iVkbColumns(0),
-    iUtil(0)
+    iUtil(nullptr)
 {
 }
 

@@ -38,7 +38,7 @@ class TextRender : public QQuickPaintedItem
 
     Q_OBJECT
 public:
-    explicit TextRender(QQuickItem *parent = 0);
+    explicit TextRender(QQuickItem *parent = nullptr);
     virtual ~TextRender();
     void paint(QPainter*);
 
@@ -49,11 +49,11 @@ public:
     int myHeight() { return iHeight; }
     void setMyWidth(int w) { if(iWidth!=w) { iWidth=w; emit myWidthChanged(w); } }
     void setMyHeight(int h) { if(iHeight!=h) { iHeight=h; emit myHeightChanged(h); } }
-    float fontWidth() { return iFontWidth; }
-    float fontHeight() { return iFontHeight; }
-    float fontDescent() { return iFontDescent; }
-    float fontAscent() { return iFontAscent; }
-    float fontPointSize() { return iFont.pointSize(); }
+    int fontWidth() { return iFontWidth; }
+    int fontHeight() { return iFontHeight; }
+    int fontDescent() { return iFontDescent; }
+    int fontAscent() { return iFontAscent; }
+    int fontPointSize() { return iFont.pointSize(); }
     void setFontPointSize(int psize);
     bool showBufferScrollIndicator() { return iShowBufferScrollIndicator; }
     void setShowBufferScrollIndicator(bool s) { if(iShowBufferScrollIndicator!=s) { iShowBufferScrollIndicator=s; emit showBufferScrollIndicatorChanged(); } }
@@ -81,17 +81,17 @@ private:
     Q_DISABLE_COPY(TextRender)
 
     void paintFromBuffer(QPainter* painter, QList<QList<TermChar> >& buffer, int from, int to, int &y);
-    void drawBgFragment(QPainter* painter, float x, float y, float width, TermChar style);
-    void drawTextFragment(QPainter* painter, float x, float y, QString text, TermChar style);
+    void drawBgFragment(QPainter* painter, int x, int y, int width, TermChar style);
+    void drawTextFragment(QPainter* painter, int x, int y, QString text, TermChar style);
     QPoint charsToPixels(QPoint pos);
 
     int iWidth;
     int iHeight;
     QFont iFont;
-    float iFontWidth;
-    float iFontHeight;
-    float iFontDescent;
-    float iFontAscent;
+    int iFontWidth;
+    int iFontHeight;
+    int iFontDescent;
+    int iFontAscent;
     bool iShowBufferScrollIndicator;
 
     Terminal *iTerm;

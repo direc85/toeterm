@@ -52,10 +52,10 @@ int main(int argc, char *argv[])
 
     // fork the child process before creating QGuiApplication
     int socketM;
-    int pid = forkpty(&socketM,NULL,NULL,NULL);
+    int pid = forkpty(&socketM,nullptr,nullptr,nullptr);
     if( pid==-1 ) {
         qFatal("forkpty failed");
-        exit(1);
+        //exit(1);
     } else if( pid==0 ) {
         setenv("TERM", settings->value("terminal/envVarTERM").toByteArray(), 1);
 

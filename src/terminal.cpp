@@ -29,7 +29,7 @@
 #include "util.h"
 
 Terminal::Terminal(QObject *parent) :
-    QObject(parent), iRenderer(0), iPtyIFace(0), iUtil(0),
+    QObject(parent), iRenderer(nullptr), iPtyIFace(nullptr), iUtil(nullptr),
     iTermSize(0,0), iEmitCursorChangeSignal(true),
     iShowCursor(true), iUseAltScreenBuffer(false), iAppCursorKeys(false)
 {
@@ -176,7 +176,7 @@ void Terminal::putString(QString str, bool unEscape)
         iPtyIFace->writeTerm(str);
 }
 
-void Terminal::keyPress(int key, int modifiers)
+void Terminal::keyPress(int key, unsigned int modifiers)
 {
     QChar c(key);
 
@@ -343,13 +343,13 @@ void Terminal::insertInBuffer(const QString& chars)
                 else if (latin==ch_ESC) {
                     escape = 0;
                 }
-                else if( escape=='[' || multiCharEscapes.contains(escape) ) {
+                else if( escape=='[' || multiCharEscapes.contains(static_cast<char>(escape)) ) {
                     escSeq += ch;
                 }
                 else if( escape==']' ) {
                     oscSeq += ch;
                 }
-                else if( multiCharEscapes.contains(escape) ) {
+                else if( multiCharEscapes.contains(static_cast<char>(escape)) ) {
                     escSeq += ch;
                 }
                 else {
@@ -362,7 +362,7 @@ void Terminal::insertInBuffer(const QString& chars)
                     escape=-1;
                     escSeq.clear();
                 }
-                if( multiCharEscapes.contains(escape) && escSeq.length()>=2 ) {
+                if( multiCharEscapes.contains(static_cast<char>(escape)) && escSeq.length()>=2 ) {
                     escControlChar(escSeq);
                     escape=-1;
                     escSeq.clear();

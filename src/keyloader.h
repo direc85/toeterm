@@ -39,7 +39,7 @@ class KeyLoader : public QObject
 {
     Q_OBJECT
 public:
-    explicit KeyLoader(QObject *parent = 0);
+    explicit KeyLoader(QObject *parent = nullptr);
     virtual ~KeyLoader();
 
     void setUtil(Util* util) { iUtil = util; }

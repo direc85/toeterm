@@ -60,7 +60,7 @@ public:
     // See http://www.calmar.ws/vim/256-xterm-24bit-rgb-color-chart.html
     // for a map of index -> color
 
-    explicit Terminal(QObject *parent = 0);
+    explicit Terminal(QObject *parent = nullptr);
     virtual ~Terminal() {}
     void setRenderer(TextRender* tr);
     void setPtyIFace(PtyIFace* pty);
@@ -80,7 +80,7 @@ public:
 
     QList<TermChar>& currentLine();
 
-    Q_INVOKABLE void keyPress(int key, int modifiers);
+    Q_INVOKABLE void keyPress(int key, unsigned int modifiers);
     Q_INVOKABLE const QStringList printableLinesFromCursor(int lines, bool withEmptyLines);
     Q_INVOKABLE void putString(QString str, bool unEscape=false);
 
