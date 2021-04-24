@@ -80,15 +80,25 @@ int main(int argc, char *argv[])
         QStringList execParts = execCmd.split(' ', QString::SkipEmptyParts);
         if(execParts.length()==0)
             exit(0);
-        char *ptrs[execParts.length()+1];
-        for(int i=0; i<execParts.length(); i++) {
-            ptrs[i] = new char[execParts.at(i).toLatin1().length()+1];
-            memcpy(ptrs[i], execParts.at(i).toLatin1().data(), execParts.at(i).toLatin1().length());
-            ptrs[i][execParts.at(i).toLatin1().length()] = 0;
-        }
-        ptrs[execParts.length()] = 0;
 
-        execvp(execParts.first().toLatin1(), ptrs);
+        char **ptrs = static_cast<char **>(malloc(sizeof(char *) * static_cast<unsigned int>(execParts.length()+1)));
+        for(int i=0; i<execParts.length(); i++) {
+            const QByteArray data = execParts.at(i).toLatin1();
+            const unsigned int length = static_cast<unsigned int>(data.length());
+
+            ptrs[i] = new char[length+1];
+            memcpy(ptrs[i], data, length);
+            ptrs[i][length] = 0;
+        }
+        ptrs[execParts.length()] = nullptr;
+
+        execvp(ptrs[0], ptrs);
+
+        for(unsigned int i = 0; i < sizeof(ptrs); i++) {
+            delete ptrs[i];
+        }
+        delete ptrs;
+
         exit(0);
     }
 
