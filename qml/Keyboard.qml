@@ -34,7 +34,7 @@ Rectangle {
     property variant currentStickyPressed: null
     property variant currentKeyPressed: 0
 
-    property string keyFgColor: bgDrawItem.visible ? Theme.lightPrimaryColor : Theme.primaryColor
+    property string keyFgColor: Theme.primaryColor
     property string keyHilightBgColor: Theme.rgba(Theme.highlightBackgroundColor, Theme.highlightBackgroundOpacity)
     property string backgroundColorActive: Theme.rgba(Theme.highlightBackgroundColor, Theme.highlightBackgroundOpacity * 0.5)
     property string indicatorColor: Theme.highlightBackgroundColor
