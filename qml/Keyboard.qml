@@ -47,13 +47,13 @@ Rectangle {
     // icon hack
     property var iconReference: {
         ":backspace": "icon-m-enter-next", // mirrored
-        ":down": "icon-m-change-type",
+        ":down": "icon-m-enter-close",
         ":enter": "icon-m-redirect", // mirrored
-        ":left": "icon-m-change-type", // rotated
-        ":right": "icon-m-change-type", // rotated
+        ":left": "icon-m-enter-close", // rotated
+        ":right": "icon-m-enter-close", // rotated
         ":shift": "icon-m-autocaps",
         ":tab": "icon-m-transfer", // rotated
-        ":up": "icon-m-change-type", // rotated
+        ":up": "icon-m-enter-close", // rotated
         "pgdn": "icon-m-page-down",
         "pgup": "icon-m-page-up"
     }
