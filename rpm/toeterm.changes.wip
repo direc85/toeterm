@@ -1,3 +1,6 @@
+* 1.9.5-1 by direc85
+- Fix SFOS 2 builds
+
 * 1.9.4-1 by direc85
 - Code quality and correctness improvements
 - Improve string and memory handling during process forking
