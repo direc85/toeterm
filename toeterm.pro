@@ -58,9 +58,9 @@ DISTFILES += \
     translations/toeterm-ru.ts \
     rpm/toeterm.yaml \
     rpm/toeterm.spec \
-    rpm/toeterm.changes \
     translations/toeterm-sv.ts \
     translations/toeterm-nl_BE.ts \
     translations/toeterm-es.ts \
     translations/toeterm-fi_FI.ts \
-    translations/toeterm-zh_CN.ts
+    translations/toeterm-zh_CN.ts \
+    rpm/toeterm.changes.wip
