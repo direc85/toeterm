@@ -581,17 +581,11 @@ Page {
             }
             width: Theme.iconSizeExtraLarge
             height: Theme.iconSizeExtraLarge
-            dimmed: true
-            highlighted: false
-            color: highlighted ? Theme.highlightColor
-                               : dimmed ? Theme.primaryColor : Theme.lightPrimaryColor
         }
         MouseArea {
             z: 2
             anchors.fill: parent
             onClicked: pageStack.push(settingsPagePath)
-            onPressed: glass.highlighted = true
-            onReleased: glass.highlighted = false
         }
     }
 }
