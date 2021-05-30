@@ -21,7 +21,6 @@ PkgConfigBR:
   - Qt0Feedback
   - nemonotifications-qt5
 Requires:
-  - qt-components-qt5
   - qt5-qtdeclarative-import-window2
   - qt5-qtdeclarative-import-xmllistmodel
   - sailfishsilica-qt5 >= 0.10.9
