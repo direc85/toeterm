@@ -121,8 +121,6 @@ Page {
                 text: qsTr("If you like my work and would like to support me, you can buy me a coffee!")
             }
 
-/*
-
             // Translations credits will be added in a later release
             AboutLabel {
                 font.pixelSize: Theme.fontSizeMedium
@@ -133,9 +131,14 @@ Page {
             AboutLabel {
                 font.pixelSize: Theme.fontSizeSmall
                 color: Theme.secondaryColor
-                text: "Suomi: Matti Viljanen"
+                text: "Svensk: eson57\n"+
+                      "español: GNUuser, ferlanero\n"+
+                      "Nederlands: d9h20f\n"+
+                      "Vlams: 9h20f\n"+
+                      "Suomi: Matti Viljanen\n"+
+                      "简体中文: dashinfantry\n"+
+                      "polski: atlochowski"
             }
-*/
 
             Button {
                 text: "GitHub"
