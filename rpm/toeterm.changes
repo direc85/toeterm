@@ -1,11 +1,11 @@
-* 1.9.5-1 by direc85
+* Wed May 26 2021 Matti Viljanen (direc85) 1.9.5-1
 - Fix SFOS 2 builds
 
-* 1.9.4-1 by direc85
+* Sat Apr 24 2021 Matti Viljanen (direc85) 1.9.4-1
 - Code quality and correctness improvements
 - Improve string and memory handling during process forking
 
-* 1.9.3-1 by direc85
+* Wed Nov 18 2020 Matti Viljanen (direc85) 1.9.3-1
 - Add experimental aarch64 build (testers needed!)
 - Fix broken F6...F11 keys (hopefully)
 - Add F12 as Shift+Esc
@@ -13,26 +13,26 @@
 - Fix layout documentation URL
 - About page rewritten
 
-* 1.9.2-1 by direc85
+* Tue Nov 17 2020 Matti Viljanen (direc85) 1.9.2-1
 - Automate version bump
 - Adjust key press rectangle position
 
-* 1.9.1-1 by direc85
+* Fri Nov 22 2019 Matti Viljanen (direc85) 1.9.1-1
 - Fix navigation dot misplacement on Jolla Tablet
 - Add Finnish layout with function keys
 
-* 1.9.0-1 by direc85
+* Fri Nov 22 2019 Matti Viljanen (direc85) 1.9.0-1
 - Execute .bashrc on startup; terminal starts in home directory (from Fingerterm source)
 - Start binary using invoker (from Fingerterm source)
 - Fix visual keyboard feedback box position and rendering
 - Remove underscores from displayed layout names
 
-* 1.8.1-1 by direc85
+* Tue Nov 19 2019 Matti Viljanen (direc85) 1.8.1-1
 - Update Chinise translation (thanks, dashinfantry!)
 - Update Spanish translation (thanks, ferlanero!)
 - Update Finnish translation
 
-* 1.8.0-1 by direc85
+* Sat Nov 16 2019 Matti Viljanen (direc85) 1.8-1
 - Initial support for Light Ambiences
 - Added orientation locking
 - Major updates to "Fade" mode code box
@@ -41,7 +41,7 @@
 - Apply keyboard fade timer properly
 - About page layout updates
 
-* 1.7.0-1 by dire85
+* Thu Nov 14 2019 Matti Viljanen (direc85) 1.7-1
 - Fix key icon sizes in e.g. XA2 Ultra
 - Use less intrusive key icons
 - Minor tweaks in Settings page
@@ -49,7 +49,7 @@
 - Don't push Settings page twice
 - Code cleanup, project housekeeping
 
-* 1.6.0-1 by ROZZ
+* Sun May 13 2018 ROZZ 1.6-1
 - Function keys support
 - English layout with function keys added
 - Minor keyboard fixes
@@ -60,14 +60,14 @@
 - ANSI ESC fixes ([J, [K)
 - Fix translations location
 
-* 1.5-1 by ROZZ
+* Mon May 7 2018 ROZZ 1.5-1
 - Update Swedish translation (thanks, eson57)
 - Add Spanish translation (thanks, Caballlero)
 - Update Dutch and Flemish translations (thanks, d9h20f)
 - Add icons to virtual keyboard
 - Sticky keys fixes
 
-* 1.4-1 by ROZZ
+* Sat Apr 28 2018 ROZZ 1.4-1
 - Add Swedish translation (thanks, eson57)
 - Fix keyboard sticky keys
 - Update Russian translation
@@ -75,12 +75,15 @@
 - Project files improvements and corrections
 - Fix copy button activation
 
-* 1.3-1 by ROZZ
+* Tue Apr 24 2018 ROZZ 1.3-1
 - Add virtual keyboard background color and transparency
 - Add layout switching
 
-* 1.2-1 by ROZZ
+* Sun Apr 22 2018 ROZZ 1.2-1
 - Add colors, background and themes
 - Add Russian keyboard layout
 - Add Dutch translations (thanks, d9h20f)
 - Fix keyboard layour error message
+
+* Thu Apr 19 2018 ROSS 1.1-1
+- Initial release (I guess)
