@@ -19,6 +19,11 @@
         <translation>Teckentabell</translation>
     </message>
     <message>
+        <location filename="../qml/AboutPage.qml" line="128"/>
+        <source>Translations</source>
+        <translation>Översättningar</translation>
+    </message>
+    <message>
         <location filename="../qml/AboutPage.qml" line="76"/>
         <source>Based on ThumbTerm by Olli Vanhoja, which is fork of FingerTerm by Heikki Holstila</source>
         <translation>Baserad på ThumbTerm av Olli Vanhoja, vilken är en förgrening från FingerTerm av Heikki Holstila</translation>

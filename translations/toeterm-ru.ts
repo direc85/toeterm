@@ -19,6 +19,11 @@
         <translation>Кодировка</translation>
     </message>
     <message>
+        <location filename="../qml/AboutPage.qml" line="128"/>
+        <source>Translations</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <location filename="../qml/AboutPage.qml" line="76"/>
         <source>Based on ThumbTerm by Olli Vanhoja, which is fork of FingerTerm by Heikki Holstila</source>
         <translation>Основан на ThumbTerm от Olli Vanhoja, форке FingerTerm от Heikki Holstila</translation>

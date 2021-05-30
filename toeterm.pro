@@ -44,23 +44,25 @@ SAILFISHAPP_ICONS = 86x86 108x108 128x128 172x172
 
 CONFIG += sailfishapp_i18n
 
-TRANSLATIONS += translations/toeterm-ru.ts \
-    translations/toeterm-nl.ts \
-    translations/toeterm-sv.ts \
-    translations/toeterm-nl_BE.ts \
+TRANSLATIONS += \
     translations/toeterm-es.ts \
     translations/toeterm-fi_FI.ts \
+    translations/toeterm-nl.ts \
+    translations/toeterm-nl_BE.ts \
+    translations/toeterm-pl_PL.ts \
+    translations/toeterm-ru.ts \
+    translations/toeterm-sv.ts \
     translations/toeterm-zh_CN.ts
 
 DISTFILES += \
-    qml/AboutLabel.qml \
-    translations/toeterm-nl.ts \
-    translations/toeterm-ru.ts \
-    rpm/toeterm.yaml \
-    rpm/toeterm.spec \
-    translations/toeterm-sv.ts \
-    translations/toeterm-nl_BE.ts \
     translations/toeterm-es.ts \
     translations/toeterm-fi_FI.ts \
+    translations/toeterm-nl.ts \
+    translations/toeterm-nl_BE.ts \
+    translations/toeterm-pl_PL.ts \
+    translations/toeterm-ru.ts \
+    translations/toeterm-sv.ts \
     translations/toeterm-zh_CN.ts \
-    rpm/toeterm.changes.wip
+    rpm/toeterm.changes \
+    rpm/toeterm.yaml \
+    rpm/toeterm.spec

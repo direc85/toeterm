@@ -19,6 +19,11 @@
         <translation>字符集</translation>
     </message>
     <message>
+        <location filename="../qml/AboutPage.qml" line="128"/>
+        <source>Translations</source>
+        <translation>翻译</translation>
+    </message>
+    <message>
         <location filename="../qml/AboutPage.qml" line="76"/>
         <source>Based on ThumbTerm by Olli Vanhoja, which is fork of FingerTerm by Heikki Holstila</source>
         <translation>基于 OlliVanhoja 开发的 ThumbTerm(即 Heukki Holstila 开发的 FingerTerm 的分支软件)。</translation>

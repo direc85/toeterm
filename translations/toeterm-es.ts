@@ -19,6 +19,11 @@
         <translation>Juego de caracteres</translation>
     </message>
     <message>
+        <location filename="../qml/AboutPage.qml" line="128"/>
+        <source>Translations</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <location filename="../qml/AboutPage.qml" line="76"/>
         <source>Based on ThumbTerm by Olli Vanhoja, which is fork of FingerTerm by Heikki Holstila</source>
         <translation>Basado en ThumbTerm de Olli Vanhoja, un fork de FingerTerm desarrollado por Heikki Holstila</translation>
