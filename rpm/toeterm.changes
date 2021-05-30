@@ -1,3 +1,11 @@
+* Sun May 30 2021 Matti Viljanen (direc85) 1.9.6-1
+- Add Polish translation (thanks, atlochowski)
+- Add language credits
+- Add proper changelog, finally!
+- Fix SFOS 4 builds
+- Remove obsolete dependency (qt-components-qt5)
+- Use Qt5Feedback instead of Qt0Feedback
+
 * Wed May 26 2021 Matti Viljanen (direc85) 1.9.5-1
 - Fix SFOS 2 builds
 
